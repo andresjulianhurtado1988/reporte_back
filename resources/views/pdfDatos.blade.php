@@ -6,7 +6,7 @@
         }
 
         body {
-            margin-top: 4.8cm;
+            margin-top: 4.5cm;
             margin-left: 2cm;
             margin-right: 1cm;
             margin-bottom: 2cm;
@@ -34,8 +34,8 @@
             height: 1cm;
 
             /** Estilos extra personales **/
-            background-color: #03a9f4;
-            color: white;
+            /* background-color: rgb(124, 127, 128);
+            color: white; */
             text-align: center;
 
         }
@@ -45,10 +45,19 @@
             margin: 1px;
             padding: 1px;
             line-height: 0.0;
-
             border: 1px black solid;
+
             /* border-radius: 30px; */
         }
+
+        .headers-detalles {
+            font-size: 6pt;
+            text-align: center;
+            margin: 10pt;
+            line-height: 0.5;
+            border: none;
+        }
+
 
         .list-style {
             list-style: none;
@@ -68,6 +77,28 @@
             font-size: 8pt;
             text-align: center;
         }
+
+        .style-egresos {
+            font-size: 6pt;
+            text-align: justify;
+            margin: 1px;
+            padding: 4px;
+            line-height: 1;
+            border: none;
+        }
+
+        .style-retroventas {
+            font-size: 6pt;
+            text-align: justify;
+            margin: 1px;
+            padding: 4px;
+            line-height: 0.5;
+            border: none;
+        }
+
+        .no-border {
+            border: none;
+        }
     </style>
 </head>
 
@@ -77,17 +108,17 @@
         <table>
             <thead>
                 <tr>
-                    <th style="border:none">
+                    <th class="no-border">
                         <p style="line-height: 0.0;font-size: 8pt; align-text: left; width:200px"><strong>SINNUT -
                                 JOYERÍA
                                 LOS DENARIOS</strong>
                         </p>
                     </th>
-                    <th style="border:none">
+                    <th class="no-border">
                         <p style="line-height: 0.0;font-size: 8pt;">CUADRE DE CAJA
                         </p>
                     </th>
-                    <td style="border:none">
+                    <td class="no-border">
                         <p style="line-height: 0.0;font-size: 8pt; align-text: right; margin-left: 135px;width:100px">
                         </p>
                     </td>
@@ -95,11 +126,11 @@
             </thead>
             <tbody>
                 <tr>
-                    <td style="border:none">
+                    <td class="no-border">
                         <p style="line-height: 0.0;font-size: 8pt;">Usuario:
                             ANLOPEZ</p>
                     </td>
-                    <td style="border:none">
+                    <td class="no-border">
                         <p style="line-height: 0.0; font-size: 6pt; align-text: justify;margin-left: 60px;">CRA 50 Nro
                             52-86 Centro -
                             Medellín - Teléfono 4735249</p>
@@ -107,17 +138,16 @@
 
                 </tr>
                 <tr>
-                    <td style="border:none">
-                        <p style="line-height: 0.0;font-size: 8pt;">Versión:
-                            0.0.1</p>
+                    <td class="no-border">
+                        <p style="line-height: 0.0;font-size: 8pt;"></p>
                     </td>
-                    <td style="border:none">
+                    <td class="no-border">
                         <p style="line-height: 0.0;font-size: 6pt; align-text: center; margin-left: 10px; width:300px">
                             NIT. 900.392.919-9
                             NEGOCIOS
                             VALLE DEL ABURRA S.A.S RESPONSABEL DE IVA</p>
                     </td>
-                    <td style="border:none">
+                    <td class="no-border">
                         <p style="line-height: 0.0; font-size: 8pt; align-text: right; margin-right: 90px;"></p>
                     </td>
                 </tr>
@@ -157,27 +187,32 @@
 
     </header>
     <footer>
-        Copyright © <?php echo date('Y'); ?>
+        <li class="list-style">
+            <p class="list-size-title"><strong>SINNUT Versión: 0.0.1</strong></p>
+            <br>
+            <p style="font-size: 6pt; width:100px">Copyright ©
+                <?php echo date('Y'); ?>
+            </p>
+        </li>
+
     </footer>
-    <table>
+    <table style="border-collapse: collapse;">
         <tbody>
             <tr>
                 <td>
-                    <table style="margin-left: 15px">
+                    <p class="title-head"><strong>INGRESOS</strong></p>
+                    <hr>
+                    <table style="margin-left: 15px;">
                         <tbody>
-                            <th colspan="3" class="title-head"><strong>INGRESOS</strong>
-                                <hr>
-                            </th>
-
                             <tr>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style">
                                         <p class="list-size-title">
                                             <strong>Contratos:</strong>
                                         </p>
                                     </li>
                                 </td>
-                                <td style="border:none">
+                                <td class="no-border">
                                     @foreach ($contratosIngresos as $con)
                                         <li class="list-style" style="margin-left: 20px">
                                             <p class="list-size-values">
@@ -185,7 +220,7 @@
                                         </li>
                                     @endforeach
                                 </td>
-                                <td style="border:none">
+                                <td class="no-border">
                                     @foreach ($contratosIngresos as $con)
                                         <li class="list-style" style="margin-left: 25px">
                                             <p class="list-size-values">{{ $con['valores'] }}
@@ -195,13 +230,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style">
                                         <p class="list-size-title"><strong>Almacén:</strong></p>
                                     </li>
                                 </td>
 
-                                <td style="border:none">
+                                <td class="no-border">
                                     @foreach ($almacenIngresos as $alm)
                                         <li class="list-style" style="margin-left: 20px">
                                             <p class="list-size-values">
@@ -209,7 +244,7 @@
                                         </li>
                                     @endforeach
                                 </td>
-                                <td style="border:none">
+                                <td class="no-border">
                                     @foreach ($almacenIngresos as $alm)
                                         <li class="list-style" style="margin-left: 25px">
                                             <p class="list-size-values">{{ $alm['valores'] }}
@@ -219,16 +254,16 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style">
                                     </li>
                                 </td>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style" style="margin-left: 23px">
                                         <p class="list-size-title"><strong>Total Ingresos:</strong></p>
                                     </li>
                                 </td>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style" style="margin-left: 30px">
                                         <p class="list-size-values">{{ $totalIngresos }}</p>
                                     </li>
@@ -238,27 +273,25 @@
                     </table>
                 </td>
                 <td>
+                    <p class="title-head"><strong>EGRESOS</strong></p>
+                    <hr>
                     <table style="margin-left: 40px">
                         <tbody>
 
-                            <th colspan="3" class="title-head"><strong>EGRESOS
-                                </strong>
-                                <hr>
-                            </th>
                             <tr>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style">
                                         <p class="list-size-title"><strong>Contratos:</strong></p>
                                     </li>
                                 </td>
-                                <td style="border:none">
+                                <td class="no-border">
                                     @foreach ($contratosEgresos as $con)
                                         <li class="list-style" style="margin-left: 25px">
                                             <p class="list-size-values">{{ $con['column_name'] }}: </p>
                                         </li>
                                     @endforeach
                                 </td>
-                                <td style="border:none">
+                                <td class="no-border">
                                     @foreach ($contratosEgresos as $con)
                                         <li class="list-style" style="margin-left: 30px">
                                             <p class="list-size-values">{{ $con['valores'] }}</p>
@@ -267,20 +300,20 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style">
                                         <p class="list-size-title"><strong>Almacén:</strong></p>
                                     </li>
                                 </td>
 
-                                <td style="border:none">
+                                <td class="no-border">
                                     @foreach ($almacenEgresos as $alm)
                                         <li class="list-style" style="margin-left: 25px">
                                             <p class="list-size-values">{{ $alm['column_name'] }}: </p>
                                         </li>
                                     @endforeach
                                 </td>
-                                <td style="border:none">
+                                <td class="no-border">
                                     @foreach ($almacenEgresos as $alm)
                                         <li class="list-style" style="margin-left: 30px">
                                             <p class="list-size-values">{{ $alm['valores'] }}</p>
@@ -289,16 +322,16 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style">
                                     </li>
                                 </td>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style" style="margin-left: 25px">
                                         <p class="list-size-title"><strong>Total Egresos:</strong></p>
                                     </li>
                                 </td>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style" style="margin-left: 30px">
                                         <p class="list-size-values">{{ $totalIngresos }}</p>
                                     </li>
@@ -308,236 +341,195 @@
                     </table>
                 </td>
             </tr>
-            <br>
             <tr>
                 <td>
-                    <table style="margin-left: 5px">
-                        <tr>
-                            <th class="title-head"><strong>DETALLE VENTAS DE ARTÍCULOS</strong>
-                                <hr>
-                            </th>
-                        </tr>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5;">
-                                        Descripción</th>
-                                    <th style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5;">Grm
-                                    </th>
-                                    <th style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5;">
-                                        Valor
-                                        IVA</th>
-                                    <th style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5;">
-                                        Subtotal</th>
-                                    <th style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5;">
-                                        Total
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($detalleVentaArticulo as $detArt)
-                                    <tr>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detArt['descripcion'] }}</td>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detArt['grm'] }}</td>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detArt['valor_iva'] }}</td>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detArt['subtotal'] }}</td>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detArt['total'] }}</td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </table>
-                    <table style="line-height: 2.0;">
-                        <tr>
-                            <th class="title-head"><strong>DETALLE OTROS INGRESOS</strong>
-                                <hr>
-                            </th>
-                        </tr>
-                        <table style="margin-left: 15px">
-                            <thead>
-                                <tr>
-                                    <th style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5;">
-                                        Descripción</th>
-                                    <th style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5;">
-                                        Valor
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($otrosIngresos as $detArt)
-                                    <tr>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detArt['descripcion'] }}</td>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detArt['valor'] }}</td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </table>
-                </td>
-
-                <td>
-                    <table>
-                        <tr>
-                            <th class="title-head"><strong>DETALLE DE EGRESOS/GASTOS
-                                </strong>
-                                <hr>
-                            </th>
-                        </tr>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5;">
-                                        Tipo
-                                        Gasto</th>
-                                    <th style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5;">
-                                        Valor
-                                        IVA</th>
-                                    <th style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5;">
-                                        Subtotal</th>
-                                    <th style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5;">
-                                        Valor
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($detalleEgresosGastos as $detGast)
-                                    <tr>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detGast['tipo_gasto'] }}</td>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detGast['valor_iva'] }}</td>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detGast['subtotal'] }}</td>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detGast['valor'] }}</td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-
-                    </table>
-                </td>
-            </tr>
-            <br>
-            <tr>
-                <td>
-                    <table>
-                        <tr>
-                            <th class="title-head"><strong>DETALLE RETROVENTAS CONTRATOS</strong>
-                                <hr>
-                            </th>
-                        </tr>
-                        <table style="width: 300px; margin-right:50px">
-                            <thead>
-                                <tr>
-                                    <th style="font-size: 6pt; text-align: left; margin: 10pt;  line-height: 0.5;">
-                                        Descripción</th>
-                                    <th style="font-size: 6pt; text-align: left; margin: 10pt;  line-height: 0.5;">
-                                        Gramos
-                                    </th>
-                                    <th style="font-size: 6pt; text-align: left; margin: 10pt;  line-height: 0.5;">
-                                        Valor
-                                        Articulos</th>
-                                    <th style="font-size: 6pt; text-align: left; margin: 10pt;  line-height: 0.5;">
-                                        Promedio Vlr/Grm</th>
-
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($detalleRetroventaContratos as $detArt)
-                                    <tr>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detArt['descripcion'] }}</td>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detArt['gramos'] }}</td>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detArt['valor_articulos'] }}</td>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detArt['promedio'] }}</td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </table>
-                </td>
-
-                <td>
-                    <table style="margin-left: 55px">
-                        <tr>
-                            <th class="title-head"><strong>DETALLE CONTRATOS NUEVOS</strong>
-                                <hr>
-                            </th>
-                        </tr>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5;">
-                                        Descripción</th>
-                                    <th style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5;">
-                                        Gramos
-                                    </th>
-                                    <th style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5;">
-                                        Valor
-                                        Artículos</th>
-                                    <th style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5;">
-                                        Valor
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($detalleContratoNuevo as $detArt)
-                                    <tr>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detArt['descripcion'] }}</td>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detArt['gramos'] }}</td>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detArt['valor_articulos'] }}</td>
-                                        <td
-                                            style="font-size: 6pt; text-align: justify; margin: 1px; padding: 4px; line-height: 0.5;">
-                                            {{ $detArt['promedio'] }}</td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <table style="margin-top: 10px;margin-left:25px">
+                    <p class="title-head"><strong>DETALLE VENTAS DE ARTÍCULOS</strong></p>
+                    <hr>
+                    <table style="margin-left: 5px;">
+                        <thead>
+                            <tr>
+                                <th class="headers-detalles">
+                                    Descripción</th>
+                                <th class="headers-detalles">
+                                    Grm
+                                </th>
+                                <th class="headers-detalles">
+                                    Valor
+                                    IVA</th>
+                                <th class="headers-detalles">
+                                    Subtotal</th>
+                                <th class="headers-detalles">
+                                    Total
+                                </th>
+                            </tr>
+                        </thead>
                         <tbody>
-                            <th colspan="3" class="title-head"><strong>RANGOS FACTURAS Y/O DOCUMENTOS</strong>
-                                <hr>
-                            </th>
+                            @foreach ($detalleVentaArticulo as $detArt)
+                                <tr>
+                                    <td class="style-retroventas">
+                                        {{ $detArt['descripcion'] }}</td>
+                                    <td class="style-retroventas">
+                                        {{ $detArt['grm'] }}</td>
+                                    <td class="style-retroventas">
+                                        {{ $detArt['valor_iva'] }}</td>
+                                    <td class="style-retroventas">
+                                        {{ $detArt['subtotal'] }}</td>
+                                    <td class="style-retroventas">
+                                        {{ $detArt['total'] }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                    <p class="title-head"><strong>DETALLE OTROS INGRESOS</strong></p>
+                    <hr>
+                    <table style="margin-left: 15px">
+                        <thead>
+                            <tr>
+                                <th
+                                    style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5; border:none">
+                                    Descripción</th>
+                                <th
+                                    style="font-size: 6pt; text-align: left; margin: 10pt;  line-height: 0.5; border:none">
+                                    Valor
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($otrosIngresos as $detArt)
+                                <tr>
+                                    <td class="style-retroventas">
+                                        {{ $detArt['descripcion'] }}</td>
+                                    <td class="style-retroventas">
+                                        {{ $detArt['valor'] }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </td>
+
+                <td>
+                    <p class="title-head"> <strong>DETALLE DE EGRESOS/GASTOS
+                        </strong>
+                    </p>
+                    <hr>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="headers-detalles">
+                                    Tipo
+                                    Gasto</th>
+                                <th class="headers-detalles">
+                                    Valor
+                                    IVA</th>
+                                <th class="headers-detalles">
+                                    Subtotal</th>
+                                <th class="headers-detalles">
+                                    Valor
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($detalleEgresosGastos as $detGast)
+                                <tr>
+                                    <td class="style-egresos">
+                                        {{ $detGast['tipo_gasto'] }}</td>
+                                    <td class="style-egresos">
+                                        {{ $detGast['valor_iva'] }}</td>
+                                    <td class="style-egresos">
+                                        {{ $detGast['subtotal'] }}</td>
+                                    <td class="style-egresos">
+                                        {{ $detGast['valor'] }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="title-head"><strong>DETALLE RETROVENTAS CONTRATOS</strong>
+                    </p>
+                    <hr>
+                    <table style="width: 300px; margin-right:50px">
+                        <thead>
+                            <tr>
+                                <th
+                                    style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5; border:none">
+                                    Descripción</th>
+                                <th
+                                    style="font-size: 6pt; text-align: left; margin: 10pt;  line-height: 0.5; border:none">
+                                    Gramos
+                                </th>
+                                <th
+                                    style="font-size: 6pt; text-align: left; margin: 10pt;  line-height: 0.5; border:none">
+                                    Valor
+                                    Articulos</th>
+                                <th
+                                    style="font-size: 6pt; text-align: left; margin: 10pt;  line-height: 0.5; border:none">
+                                    Promedio Vlr/Grm</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($detalleRetroventaContratos as $detArt)
+                                <tr>
+                                    <td class="style-retroventas">
+                                        {{ $detArt['descripcion'] }}</td>
+                                    <td class="style-retroventas">
+                                        {{ $detArt['gramos'] }}</td>
+                                    <td class="style-retroventas">
+                                        {{ $detArt['valor_articulos'] }}</td>
+                                    <td class="style-retroventas">
+                                        {{ $detArt['promedio'] }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <p class="title-head"><strong>DETALLE CONTRATOS NUEVOS</strong></p>
+                    <hr>
+                    <table style="margin-left: 55px">
+                        <thead>
+                            <tr>
+                                <th class="headers-detalles">
+                                    Descripción</th>
+                                <th class="headers-detalles">
+                                    Gramos
+                                </th>
+                                <th class="headers-detalles">
+                                    Valor
+                                    Artículos</th>
+                                <th class="headers-detalles">
+                                    Valor
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($detalleContratoNuevo as $detArt)
+                                <tr>
+                                    <td class="style-retroventas">
+                                        {{ $detArt['descripcion'] }}</td>
+                                    <td class="style-retroventas">
+                                        {{ $detArt['gramos'] }}</td>
+                                    <td class="style-retroventas">
+                                        {{ $detArt['valor_articulos'] }}</td>
+                                    <td class="style-retroventas">
+                                        {{ $detArt['promedio'] }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="title-head"><strong>RANGOS FACTURAS Y/O DOCUMENTOS</strong></p>
+                    <hr>
+                    <table style="margin-top: 10px;margin-left:35px">
+                        <tbody>
 
                             <tr>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style">
                                         <p class="list-size-title"><strong>Rango de Contratos:</strong></p>
                                     </li>
@@ -554,14 +546,14 @@
                                         <p class="list-size-title"><strong>Facturas Prórrogas:</strong></p>
                                     </li>
                                 </td>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style"></li>
                                     <li class="list-style"></li>
                                     <li class="list-style"></li>
                                     <li class="list-style"></li>
                                     <li class="list-style"></li>
                                 </td>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style" style="text-align: right;">
                                         <p class="list-size-values">26332/26335</p>
                                     </li>
@@ -579,20 +571,16 @@
                                     </li>
                                 </td>
                             </tr>
-
-
                         </tbody>
                     </table>
                 </td>
                 <td>
+                    <p class="title-head"><strong>TOTALES</strong></p>
+                    <hr>
                     <table style="margin-left: 75px;margin-top: 10px">
                         <tbody>
-
-                            <th colspan="3" class="title-head"><strong>TOTALES</strong>
-                                <hr>
-                            </th>
                             <tr>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style">
                                         <p class="list-size-title"><strong>SALDO INICIAL EN CAJA:</strong></p>
                                     </li>
@@ -609,7 +597,7 @@
                                         <p class="list-size-title"><strong>Estación de Trabajo:</strong></p>
                                     </li>
                                 </td>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style">
                                     </li>
                                     <li class="list-style">
@@ -621,7 +609,7 @@
                                     <li class="list-style">
                                     </li>
                                 </td>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style" style="text-align: right;">
                                         <p class="list-size-values">18.018.996,76</p>
                                     </li>
@@ -646,14 +634,12 @@
             </tr>
             <tr>
                 <td>
+                    <p colspan="2" class="title-head"><strong>EFECTIVO EN CAJA</strong></p>
+                    <hr>
                     <table style="margin-top: 10px;  width:300px">
                         <tbody>
-                            <th colspan="2" class="title-head"><strong>EFECTIVO EN CAJA</strong>
-                                <hr>
-                            </th>
-
                             <tr>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style">
                                         <p class="list-size-title"><strong>BILLETES:</strong></p>
                                     </li>
@@ -667,7 +653,7 @@
                                         <p class="list-size-title"><strong>TOTAL EFECTIVO:</strong></p>
                                     </li>
                                 </td>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style" style="text-align: right;">
                                         <p class="list-size-values">27.849.000,00</p>
                                     </li>
@@ -686,14 +672,12 @@
                     </table>
                 </td>
                 <td>
+                    <p class="title-head"><strong>SOBRANTE O FALTANTE EN CAJA</strong></p>
+                    <hr>
                     <table style="margin-left:25px; margin-top: 10px;  width:300px; ">
                         <tbody>
-
-                            <th colspan="3" class="title-head"><strong>SOBRANTE O FALTANTE EN CAJA</strong>
-                                <hr>
-                            </th>
                             <tr>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style">
                                         <p class="list-size-title"><strong>SOBRANTE:</strong></p>
                                     </li>
@@ -701,13 +685,13 @@
                                         <p class="list-size-title"><strong>FALTANTE:</strong></p>
                                     </li>
                                 </td>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style">
                                     </li>
                                     <li class="list-style">
                                     </li>
                                 </td>
-                                <td style="border:none">
+                                <td class="no-border">
                                     <li class="list-style" style="text-align: right;">
                                         <p class="list-size-values">,006</p>
                                     </li>
@@ -720,37 +704,20 @@
                     </table>
                 </td>
             </tr>
-            <tr>
-                <td style="border:none">
-                    <table style="margin-top: 10px;  width:500px; border:none">
-                        <tbody>
-                            <tr style="border:none">
-                                <td style="border:none">
-                                    <li class="list-style">
-                                        <p class="list-size-title"><strong>Firma Responsable:</strong></p>
-                                    </li>
-                                    <li class="list-style" style="text-align: left;">
-                                        <p class="list-size-title"><strong>Estación de trabajo:</strong></p>
-                                    </li>
-                                </td>
-                                <td style="border:none">
-                                    <li class="list-style">
-                                        <p class="list-size-values">
-                                            ____________________________________________________________
-                                        </p>
-                                    </li>
-                                    <li class="list-style" style="text-align: left;">
-                                        <p class="list-size-values">SERVIDOR01</p>
-                                    </li>
 
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
         </tbody>
     </table>
+    <br>
+    <li class="list-style">
+        <p class="list-size-title"><strong>Firma Responsable:</strong></p>
+        <br>
+        <hr>
+    </li>
+    <li class="list-style" style="text-align: left;">
+        <p class="list-size-title"><strong>Estación de trabajo: </strong>SERVIDOR01</p>
+    </li>
+
+
 
     <script type="text/php">
         if ( isset($pdf) ) {
