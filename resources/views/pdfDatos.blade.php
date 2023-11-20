@@ -50,14 +50,22 @@
             /* border-radius: 30px; */
         }
 
-        .headers-detalles {
+        .style-headers {
             font-size: 6pt;
-            text-align: center;
             margin: 10pt;
             line-height: 0.5;
             border: none;
+
         }
 
+        .style-values {
+            font-size: 6pt;
+            margin: 1px;
+            padding: 4px;
+            line-height: 0.5;
+            border: none;
+
+        }
 
         .list-style {
             list-style: none;
@@ -76,24 +84,6 @@
         .title-head {
             font-size: 8pt;
             text-align: center;
-        }
-
-        .style-egresos {
-            font-size: 6pt;
-            text-align: justify;
-            margin: 1px;
-            padding: 4px;
-            line-height: 1;
-            border: none;
-        }
-
-        .style-retroventas {
-            font-size: 6pt;
-            text-align: justify;
-            margin: 1px;
-            padding: 4px;
-            line-height: 0.5;
-            border: none;
         }
 
         .no-border {
@@ -202,7 +192,7 @@
                 <td>
                     <p class="title-head"><strong>INGRESOS</strong></p>
                     <hr>
-                    <table style="margin-left: 15px;">
+                    <table style="margin-left: 15px; ">
                         <tbody>
                             <tr>
                                 <td class="no-border">
@@ -348,17 +338,17 @@
                     <table style="margin-left: 5px;">
                         <thead>
                             <tr>
-                                <th class="headers-detalles">
+                                <th style=" text-align: center;" class="style-headers">
                                     Descripción</th>
-                                <th class="headers-detalles">
+                                <th style=" text-align: center;" class="style-headers">
                                     Grm
                                 </th>
-                                <th class="headers-detalles">
+                                <th style=" text-align: center;" class="style-headers">
                                     Valor
                                     IVA</th>
-                                <th class="headers-detalles">
+                                <th style=" text-align: center;" class="style-headers">
                                     Subtotal</th>
-                                <th class="headers-detalles">
+                                <th style=" text-align: center;" class="style-headers">
                                     Total
                                 </th>
                             </tr>
@@ -366,15 +356,15 @@
                         <tbody>
                             @foreach ($detalleVentaArticulo as $detArt)
                                 <tr>
-                                    <td class="style-retroventas">
+                                    <td style=" text-align: justify;" class="style-values">
                                         {{ $detArt['descripcion'] }}</td>
-                                    <td class="style-retroventas">
+                                    <td style=" text-align: justify;" class="style-values">
                                         {{ $detArt['grm'] }}</td>
-                                    <td class="style-retroventas">
+                                    <td style=" text-align: justify;" class="style-values">
                                         {{ $detArt['valor_iva'] }}</td>
-                                    <td class="style-retroventas">
+                                    <td style=" text-align: justify;" class="style-values">
                                         {{ $detArt['subtotal'] }}</td>
-                                    <td class="style-retroventas">
+                                    <td style=" text-align: justify;" class="style-values">
                                         {{ $detArt['total'] }}</td>
                                 </tr>
                             @endforeach
@@ -385,11 +375,9 @@
                     <table style="margin-left: 15px">
                         <thead>
                             <tr>
-                                <th
-                                    style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5; border:none">
+                                <th style=" text-align: center;" class="style-headers">
                                     Descripción</th>
-                                <th
-                                    style="font-size: 6pt; text-align: left; margin: 10pt;  line-height: 0.5; border:none">
+                                <th style=" text-align: left;" class="style-headers">
                                     Valor
                                 </th>
                             </tr>
@@ -397,9 +385,9 @@
                         <tbody>
                             @foreach ($otrosIngresos as $detArt)
                                 <tr>
-                                    <td class="style-retroventas">
+                                    <td style="text-align: justify;" class="style-values">
                                         {{ $detArt['descripcion'] }}</td>
-                                    <td class="style-retroventas">
+                                    <td style=" text-align: justify;" class="style-values">
                                         {{ $detArt['valor'] }}</td>
                                 </tr>
                             @endforeach
@@ -415,15 +403,15 @@
                     <table>
                         <thead>
                             <tr>
-                                <th class="headers-detalles">
+                                <th style=" text-align: center;" class="style-headers">
                                     Tipo
                                     Gasto</th>
-                                <th class="headers-detalles">
+                                <th style=" text-align: center;" class="style-headers">
                                     Valor
                                     IVA</th>
-                                <th class="headers-detalles">
+                                <th style=" text-align: center;" class="style-headers">
                                     Subtotal</th>
-                                <th class="headers-detalles">
+                                <th style=" text-align: center;" class="style-headers">
                                     Valor
                                 </th>
                             </tr>
@@ -431,13 +419,17 @@
                         <tbody>
                             @foreach ($detalleEgresosGastos as $detGast)
                                 <tr>
-                                    <td class="style-egresos">
+                                    <td
+                                        style="font-size: 6pt;  margin: 1px; padding: 4px; line-height: 1; border:none; text-align: justify;">
                                         {{ $detGast['tipo_gasto'] }}</td>
-                                    <td class="style-egresos">
+                                    <td
+                                        style="font-size: 6pt;  margin: 1px; padding: 4px; line-height: 1; border:none; text-align: justify;">
                                         {{ $detGast['valor_iva'] }}</td>
-                                    <td class="style-egresos">
+                                    <td
+                                        style="font-size: 6pt;  margin: 1px; padding: 4px; line-height: 1; border:none; text-align: justify;">
                                         {{ $detGast['subtotal'] }}</td>
-                                    <td class="style-egresos">
+                                    <td
+                                        style="font-size: 6pt;  margin: 1px; padding: 4px; line-height: 1; border:none; text-align: justify;">
                                         {{ $detGast['valor'] }}</td>
                                 </tr>
                             @endforeach
@@ -453,32 +445,28 @@
                     <table style="width: 300px; margin-right:50px">
                         <thead>
                             <tr>
-                                <th
-                                    style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5; border:none">
+                                <th style=" text-align: center;" class="style-headers">
                                     Descripción</th>
-                                <th
-                                    style="font-size: 6pt; text-align: left; margin: 10pt;  line-height: 0.5; border:none">
+                                <th style=" text-align: left;" class="style-headers">
                                     Gramos
                                 </th>
-                                <th
-                                    style="font-size: 6pt; text-align: left; margin: 10pt;  line-height: 0.5; border:none">
+                                <th style=" text-align: left;" class="style-headers">
                                     Valor
                                     Articulos</th>
-                                <th
-                                    style="font-size: 6pt; text-align: left; margin: 10pt;  line-height: 0.5; border:none">
+                                <th style=" text-align: left;" class="style-headers">
                                     Promedio Vlr/Grm</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($detalleRetroventaContratos as $detArt)
                                 <tr>
-                                    <td class="style-retroventas">
+                                    <td style=" text-align: justify;" class="style-values">
                                         {{ $detArt['descripcion'] }}</td>
-                                    <td class="style-retroventas">
+                                    <td style=" text-align: justify;" class="style-values">
                                         {{ $detArt['gramos'] }}</td>
-                                    <td class="style-retroventas">
+                                    <td style=" text-align: justify;" class="style-values">
                                         {{ $detArt['valor_articulos'] }}</td>
-                                    <td class="style-retroventas">
+                                    <td style=" text-align: justify;" class="style-values">
                                         {{ $detArt['promedio'] }}</td>
                                 </tr>
                             @endforeach
@@ -491,15 +479,15 @@
                     <table style="margin-left: 55px">
                         <thead>
                             <tr>
-                                <th class="headers-detalles">
+                                <th style=" text-align: center;" class="style-headers">
                                     Descripción</th>
-                                <th class="headers-detalles">
+                                <th style=" text-align: center;" class="style-headers">
                                     Gramos
                                 </th>
-                                <th class="headers-detalles">
+                                <th style=" text-align: center;" class="style-headers">
                                     Valor
                                     Artículos</th>
-                                <th class="headers-detalles">
+                                <th style=" text-align: center;" class="style-headers">
                                     Valor
                                 </th>
                             </tr>
@@ -507,13 +495,13 @@
                         <tbody>
                             @foreach ($detalleContratoNuevo as $detArt)
                                 <tr>
-                                    <td class="style-retroventas">
+                                    <td style=" text-align: justify;" class="style-values">
                                         {{ $detArt['descripcion'] }}</td>
-                                    <td class="style-retroventas">
+                                    <td style=" text-align: justify;" class="style-values">
                                         {{ $detArt['gramos'] }}</td>
-                                    <td class="style-retroventas">
+                                    <td style=" text-align: justify;" class="style-values">
                                         {{ $detArt['valor_articulos'] }}</td>
-                                    <td class="style-retroventas">
+                                    <td style=" text-align: justify;" class="style-values">
                                         {{ $detArt['promedio'] }}</td>
                                 </tr>
                             @endforeach
@@ -717,8 +705,6 @@
         <p class="list-size-title"><strong>Estación de trabajo: </strong>SERVIDOR01</p>
     </li>
 
-
-
     <script type="text/php">
         if ( isset($pdf) ) {
             $pdf->page_script('
@@ -729,8 +715,3 @@
 	</script>
 
 </body>
-
-
-{{-- Sienita
-Damaya
-Essun  --}}
