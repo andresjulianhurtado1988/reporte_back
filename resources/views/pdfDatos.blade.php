@@ -18,10 +18,6 @@
             left: 1cm;
             right: 1cm;
             height: 2cm;
-
-            /** Estilos extra personales **/
-            /* background-color: #03a9f4;
-            color: white; */
             text-align: center;
             line-height: 1.5cm;
         }
@@ -32,12 +28,7 @@
             left: 0cm;
             right: 0cm;
             height: 1cm;
-
-            /** Estilos extra personales **/
-            /* background-color: rgb(124, 127, 128);
-            color: white; */
             text-align: center;
-
         }
 
         table td {
@@ -46,8 +37,6 @@
             padding: 1px;
             line-height: 0.0;
             border: 1px black solid;
-
-            /* border-radius: 30px; */
         }
 
         .style-headers {
@@ -55,7 +44,6 @@
             margin: 10pt;
             line-height: 0.5;
             border: none;
-
         }
 
         .style-values {
@@ -64,7 +52,6 @@
             padding: 4px;
             line-height: 0.5;
             border: none;
-
         }
 
         .list-style {
@@ -74,7 +61,6 @@
 
         .list-size-title {
             font-size: 6pt;
-
         }
 
         .list-size-values {
