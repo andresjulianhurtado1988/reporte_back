@@ -365,6 +365,84 @@ class ReporteController extends Controller
                 "valor" => '329.227,00'
             ],
             [
+                "tipo_gasto" => 'OTRA COSA DE PRUEBA',
+                "valor_iva" => '00.000.000,00',
+                "subtotal" => '00.000.000,00',
+                "valor" => '00.000.000,00'
+            ],
+            [
+                "tipo_gasto" => 'OTRA COSA DE PRUEBA',
+                "valor_iva" => '00.000.000,00',
+                "subtotal" => '00.000.000,00',
+                "valor" => '00.000.000,00'
+            ],
+            [
+                "tipo_gasto" => 'OTRA COSA DE PRUEBA',
+                "valor_iva" => '00.000.000,00',
+                "subtotal" => '00.000.000,00',
+                "valor" => '00.000.000,00'
+            ],
+            [
+                "tipo_gasto" => 'OTRA COSA DE PRUEBA',
+                "valor_iva" => '00.000.000,00',
+                "subtotal" => '00.000.000,00',
+                "valor" => '00.000.000,00'
+            ],
+            [
+                "tipo_gasto" => 'OTRA COSA DE PRUEBA',
+                "valor_iva" => '00.000.000,00',
+                "subtotal" => '00.000.000,00',
+                "valor" => '00.000.000,00'
+            ],
+            [
+                "tipo_gasto" => 'OTRA COSA DE PRUEBA',
+                "valor_iva" => '00.000.000,00',
+                "subtotal" => '00.000.000,00',
+                "valor" => '00.000.000,00'
+            ],
+            [
+                "tipo_gasto" => 'OTRA COSA DE PRUEBA',
+                "valor_iva" => '00.000.000,00',
+                "subtotal" => '00.000.000,00',
+                "valor" => '00.000.000,00'
+            ],
+            [
+                "tipo_gasto" => 'OTRA COSA DE PRUEBA',
+                "valor_iva" => '00.000.000,00',
+                "subtotal" => '00.000.000,00',
+                "valor" => '00.000.000,00'
+            ],
+            [
+                "tipo_gasto" => 'OTRA COSA DE PRUEBA',
+                "valor_iva" => '00.000.000,00',
+                "subtotal" => '00.000.000,00',
+                "valor" => '00.000.000,00'
+            ],
+            [
+                "tipo_gasto" => 'OTRA COSA DE PRUEBA',
+                "valor_iva" => '00.000.000,00',
+                "subtotal" => '00.000.000,00',
+                "valor" => '00.000.000,00'
+            ],
+            [
+                "tipo_gasto" => 'OTRA COSA DE PRUEBA',
+                "valor_iva" => '00.000.000,00',
+                "subtotal" => '00.000.000,00',
+                "valor" => '00.000.000,00'
+            ],
+            [
+                "tipo_gasto" => 'OTRA COSA DE PRUEBA',
+                "valor_iva" => '00.000.000,00',
+                "subtotal" => '00.000.000,00',
+                "valor" => '00.000.000,00'
+            ],
+            [
+                "tipo_gasto" => 'OTRA COSA DE PRUEBA',
+                "valor_iva" => '00.000.000,00',
+                "subtotal" => '00.000.000,00',
+                "valor" => '00.000.000,00'
+            ],
+            [
                 "tipo_gasto" => 'TOTAL',
                 "valor_iva" => '569.491,00',
                 "subtotal" => '5.540.840,00',

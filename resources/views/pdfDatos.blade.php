@@ -76,48 +76,48 @@
     <header>
         <table>
             <thead>
-                <tr style="">
-                    <th>
+                <tr>
+                    <th style="border:none">
                         <p style="line-height: 0.0;font-size: 8pt; align-text: left; width:200px"><strong>SINNUT -
                                 JOYERÍA
                                 LOS DENARIOS</strong>
                         </p>
                     </th>
-                    <th>
+                    <th style="border:none">
                         <p style="line-height: 0.0;font-size: 8pt;">CUADRE DE CAJA
                         </p>
                     </th>
-                    <td>
+                    <td style="border:none">
                         <p style="line-height: 0.0;font-size: 8pt; align-text: right; margin-left: 135px;width:100px">
-                            Página 1 de 1</p>
+                        </p>
                     </td>
                 </tr>
             </thead>
             <tbody>
-                <tr style="">
-                    <td>
+                <tr>
+                    <td style="border:none">
                         <p style="line-height: 0.0;font-size: 8pt;">Usuario:
                             ANLOPEZ</p>
                     </td>
-                    <td>
+                    <td style="border:none">
                         <p style="line-height: 0.0; font-size: 6pt; align-text: justify;margin-left: 60px;">CRA 50 Nro
                             52-86 Centro -
                             Medellín - Teléfono 4735249</p>
                     </td>
 
                 </tr>
-                <tr style="">
-                    <td>
+                <tr>
+                    <td style="border:none">
                         <p style="line-height: 0.0;font-size: 8pt;">Versión:
                             0.0.1</p>
                     </td>
-                    <td>
+                    <td style="border:none">
                         <p style="line-height: 0.0;font-size: 6pt; align-text: center; margin-left: 10px; width:300px">
                             NIT. 900.392.919-9
                             NEGOCIOS
                             VALLE DEL ABURRA S.A.S RESPONSABEL DE IVA</p>
                     </td>
-                    <td>
+                    <td style="border:none">
                         <p style="line-height: 0.0; font-size: 8pt; align-text: right; margin-right: 90px;"></p>
                     </td>
                 </tr>
@@ -163,21 +163,21 @@
         <tbody>
             <tr>
                 <td>
-                    <table style="margin-left: 5px">
+                    <table style="margin-left: 15px">
                         <tbody>
                             <th colspan="3" class="title-head"><strong>INGRESOS</strong>
                                 <hr>
                             </th>
 
                             <tr>
-                                <td sty>
+                                <td style="border:none">
                                     <li class="list-style">
                                         <p class="list-size-title">
                                             <strong>Contratos:</strong>
                                         </p>
                                     </li>
                                 </td>
-                                <td>
+                                <td style="border:none">
                                     @foreach ($contratosIngresos as $con)
                                         <li class="list-style" style="margin-left: 20px">
                                             <p class="list-size-values">
@@ -185,7 +185,7 @@
                                         </li>
                                     @endforeach
                                 </td>
-                                <td>
+                                <td style="border:none">
                                     @foreach ($contratosIngresos as $con)
                                         <li class="list-style" style="margin-left: 25px">
                                             <p class="list-size-values">{{ $con['valores'] }}
@@ -195,13 +195,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style">
                                         <p class="list-size-title"><strong>Almacén:</strong></p>
                                     </li>
                                 </td>
 
-                                <td>
+                                <td style="border:none">
                                     @foreach ($almacenIngresos as $alm)
                                         <li class="list-style" style="margin-left: 20px">
                                             <p class="list-size-values">
@@ -209,7 +209,7 @@
                                         </li>
                                     @endforeach
                                 </td>
-                                <td>
+                                <td style="border:none">
                                     @foreach ($almacenIngresos as $alm)
                                         <li class="list-style" style="margin-left: 25px">
                                             <p class="list-size-values">{{ $alm['valores'] }}
@@ -219,16 +219,16 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style">
                                     </li>
                                 </td>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style" style="margin-left: 23px">
                                         <p class="list-size-title"><strong>Total Ingresos:</strong></p>
                                     </li>
                                 </td>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style" style="margin-left: 30px">
                                         <p class="list-size-values">{{ $totalIngresos }}</p>
                                     </li>
@@ -246,19 +246,19 @@
                                 <hr>
                             </th>
                             <tr>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style">
                                         <p class="list-size-title"><strong>Contratos:</strong></p>
                                     </li>
                                 </td>
-                                <td>
+                                <td style="border:none">
                                     @foreach ($contratosEgresos as $con)
                                         <li class="list-style" style="margin-left: 25px">
                                             <p class="list-size-values">{{ $con['column_name'] }}: </p>
                                         </li>
                                     @endforeach
                                 </td>
-                                <td>
+                                <td style="border:none">
                                     @foreach ($contratosEgresos as $con)
                                         <li class="list-style" style="margin-left: 30px">
                                             <p class="list-size-values">{{ $con['valores'] }}</p>
@@ -267,20 +267,20 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style">
                                         <p class="list-size-title"><strong>Almacén:</strong></p>
                                     </li>
                                 </td>
 
-                                <td>
+                                <td style="border:none">
                                     @foreach ($almacenEgresos as $alm)
                                         <li class="list-style" style="margin-left: 25px">
                                             <p class="list-size-values">{{ $alm['column_name'] }}: </p>
                                         </li>
                                     @endforeach
                                 </td>
-                                <td>
+                                <td style="border:none">
                                     @foreach ($almacenEgresos as $alm)
                                         <li class="list-style" style="margin-left: 30px">
                                             <p class="list-size-values">{{ $alm['valores'] }}</p>
@@ -289,16 +289,16 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style">
                                     </li>
                                 </td>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style" style="margin-left: 25px">
                                         <p class="list-size-title"><strong>Total Egresos:</strong></p>
                                     </li>
                                 </td>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style" style="margin-left: 30px">
                                         <p class="list-size-values">{{ $totalIngresos }}</p>
                                     </li>
@@ -363,7 +363,7 @@
                                 <hr>
                             </th>
                         </tr>
-                        <table>
+                        <table style="margin-left: 15px">
                             <thead>
                                 <tr>
                                     <th style="font-size: 6pt; text-align: center; margin: 10pt;  line-height: 0.5;">
@@ -530,14 +530,14 @@
             </tr>
             <tr>
                 <td>
-                    <table style="margin-top: 10px;margin-left:10px">
+                    <table style="margin-top: 10px;margin-left:25px">
                         <tbody>
                             <th colspan="3" class="title-head"><strong>RANGOS FACTURAS Y/O DOCUMENTOS</strong>
                                 <hr>
                             </th>
 
                             <tr>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style">
                                         <p class="list-size-title"><strong>Rango de Contratos:</strong></p>
                                     </li>
@@ -554,14 +554,14 @@
                                         <p class="list-size-title"><strong>Facturas Prórrogas:</strong></p>
                                     </li>
                                 </td>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style"></li>
                                     <li class="list-style"></li>
                                     <li class="list-style"></li>
                                     <li class="list-style"></li>
                                     <li class="list-style"></li>
                                 </td>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style" style="text-align: right;">
                                         <p class="list-size-values">26332/26335</p>
                                     </li>
@@ -592,7 +592,7 @@
                                 <hr>
                             </th>
                             <tr>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style">
                                         <p class="list-size-title"><strong>SALDO INICIAL EN CAJA:</strong></p>
                                     </li>
@@ -609,7 +609,7 @@
                                         <p class="list-size-title"><strong>Estación de Trabajo:</strong></p>
                                     </li>
                                 </td>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style">
                                     </li>
                                     <li class="list-style">
@@ -621,7 +621,7 @@
                                     <li class="list-style">
                                     </li>
                                 </td>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style" style="text-align: right;">
                                         <p class="list-size-values">18.018.996,76</p>
                                     </li>
@@ -653,7 +653,7 @@
                             </th>
 
                             <tr>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style">
                                         <p class="list-size-title"><strong>BILLETES:</strong></p>
                                     </li>
@@ -667,7 +667,7 @@
                                         <p class="list-size-title"><strong>TOTAL EFECTIVO:</strong></p>
                                     </li>
                                 </td>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style" style="text-align: right;">
                                         <p class="list-size-values">27.849.000,00</p>
                                     </li>
@@ -681,22 +681,19 @@
                                         <p class="list-size-values">28.083.700,00</p>
                                     </li>
                                 </td>
-
                             </tr>
-
-
                         </tbody>
                     </table>
                 </td>
                 <td>
-                    <table style="margin-left:25px; margin-top: 10px;  width:300px">
+                    <table style="margin-left:25px; margin-top: 10px;  width:300px; ">
                         <tbody>
 
                             <th colspan="3" class="title-head"><strong>SOBRANTE O FALTANTE EN CAJA</strong>
                                 <hr>
                             </th>
                             <tr>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style">
                                         <p class="list-size-title"><strong>SOBRANTE:</strong></p>
                                     </li>
@@ -704,13 +701,13 @@
                                         <p class="list-size-title"><strong>FALTANTE:</strong></p>
                                     </li>
                                 </td>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style">
                                     </li>
                                     <li class="list-style">
                                     </li>
                                 </td>
-                                <td>
+                                <td style="border:none">
                                     <li class="list-style" style="text-align: right;">
                                         <p class="list-size-values">,006</p>
                                     </li>
@@ -723,6 +720,50 @@
                     </table>
                 </td>
             </tr>
+            <tr>
+                <td style="border:none">
+                    <table style="margin-top: 10px;  width:500px; border:none">
+                        <tbody>
+                            <tr style="border:none">
+                                <td style="border:none">
+                                    <li class="list-style">
+                                        <p class="list-size-title"><strong>Firma Responsable:</strong></p>
+                                    </li>
+                                    <li class="list-style" style="text-align: left;">
+                                        <p class="list-size-title"><strong>Estación de trabajo:</strong></p>
+                                    </li>
+                                </td>
+                                <td style="border:none">
+                                    <li class="list-style">
+                                        <p class="list-size-values">
+                                            ____________________________________________________________
+                                        </p>
+                                    </li>
+                                    <li class="list-style" style="text-align: left;">
+                                        <p class="list-size-values">SERVIDOR01</p>
+                                    </li>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
         </tbody>
     </table>
+
+    <script type="text/php">
+        if ( isset($pdf) ) {
+            $pdf->page_script('
+                $font = $fontMetrics->get_font("Arial, Helvetica, sans-serif", "normal");
+                $pdf->text(520, 30, "Página $PAGE_NUM de $PAGE_COUNT", $font, 8);
+            ');
+        }
+	</script>
+
 </body>
+
+
+{{-- Sienita
+Damaya
+Essun  --}}
