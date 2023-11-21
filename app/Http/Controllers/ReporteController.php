@@ -6,45 +6,15 @@ use App\Models\ReportePrueba;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\ReporteExport;
 
 class ReporteController extends Controller
 {
 
-    public function pruebaRuta()
+    public function generarExcel(Request $request)
     {
-        $algo = $this->ingresosData();
-
-
-
-
-        // foreach ($algo as $value) {
-        //     $contratos = $value['contratos'];
-        // }
-
-        return DB::table('tbl_tienda')
-            ->select(
-                'nombre',
-                'direccion',
-                'telefono',
-                'correo_electronico',
-            )->get();
-
-        //   return $algo['contratos'];
-        // return $algo['contratos'];
-        //return response()->json([
-
-        // 'tiendas' => DB::table('tbl_tienda')
-        //     ->select(
-        //         'nombre',
-        //         'direccion',
-        //         'telefono',
-        //         'correo_electronico',
-        //     )->get(),
-        // 'ciudades' => DB::table('tbl_ciudad')
-        //     ->select('nombre', 'codigo_dane')
-        //     ->where('id', '<', 8)->get(),
-        //     'respuesta' => $algo['contratos']
-        // ]);
+        return Excel::download(new ReporteExport, 'reporte.xlsx');
 
     }
     public function reportePdf(Request $request)
@@ -275,7 +245,6 @@ class ReporteController extends Controller
 
         ];
     }
-
 
     public function detalleEgresosGastos()
     {

@@ -25,3 +25,5 @@ Route::get('/pruebaRuta', [ReporteController::class, 'pruebaRuta'])->name('prueb
 
 Route::post('/reportePdf', [ReporteController::class, 'reportePdf'])->name('reportePdf');
 Route::post('/generarPdf', [ReporteController::class, 'generarPdf'])->name('generarPdf');
+
+Route::post('/generarExcel', [ReporteController::class, 'generarExcel'])->name('generarExcel');
