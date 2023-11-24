@@ -370,7 +370,7 @@ class ReporteController extends Controller
                 "valor" => '948.806,00'
             ],
             [
-                "descripcion" => 'Total',
+                "descripcion" => 'TOTAL',
                 "valor" => '15.994.798,00'
             ],
         ];
