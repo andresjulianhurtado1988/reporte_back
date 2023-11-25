@@ -26,7 +26,10 @@ class DatabaseSeeder extends Seeder
             DetalleContratoNuevoSeed::class,
             DetalleRetroventaContratosSeed::class,
             DetalleOrdenesVentasRemisionadasSeed::class,
-            DetalleResolucionContratosVencidosSeed::class
+            DetalleResolucionContratosVencidosSeed::class,
+            DetalleSalidaDecomisionSeed::class,
+            DetalleArticulosTrasladosEntradaSeed::class,
+            DetalleArticulosTrasladosSalidaSeed::class
         ]);
     }
 }
