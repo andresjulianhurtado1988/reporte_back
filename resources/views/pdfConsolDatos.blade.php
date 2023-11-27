@@ -494,7 +494,6 @@
     </table>
 
 
-
     <table style="border-collapse: collapse;margin: 1px;border: 0.5px black solid;line-height: 1;">
 
         <caption style="padding: 10px;">
@@ -548,10 +547,10 @@
             @foreach ($detalleOrdenesVentasRemisionadas as $detOrdRem)
                 <tr>
                     <td
-                        style="white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 6pt; border: none;text-align:left">
+                        style="white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 6pt; border: none;text-align:center">
                         {{ $detOrdRem->id_orden }}</td>
                     <td
-                        style="padding-left: 10px; white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 6pt; border: none;text-align:right">
+                        style="padding-left: 5px; white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 6pt; border: none;text-align:center">
                         {{ $detOrdRem->id_venta }}</td>
                     <td
                         style="padding-left: 5px; white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 6pt; border: none;text-align:left">
@@ -591,9 +590,274 @@
 
 
 
+    <table style="border-collapse: collapse;margin: 1px;border: 0.5px black solid;line-height: 1; width:750px">
+
+        <caption style="padding: 10px;">
+            <p class="title-head"><strong>DETALLE DE COMPRAS</strong></p>
+        </caption>
+        <thead>
+            <tr>
+                <th style="font-size: 7pt;line-height: 1; border: none;white-space: nowrap;padding: 0.5em;">
+                    Descripción</th>
+                <th
+                    style="padding-left: 25px;font-size: 7pt;line-height: 1; border: none;white-space: nowrap;padding: 0.5em;">
+                    Grm</th>
+                <th
+                    style="padding-left: 25px;font-size: 7pt;line-height: 1; border: none;white-space: nowrap;padding: 0.5em;">
+                    Subtotal</th>
+                <th
+                    style="padding-left: 25px;font-size: 7pt;line-height: 1; border: none;white-space: nowrap;padding: 0.5em;">
+                    Valor IVA
+                </th>
+                <th
+                    style="padding-left: 25px;font-size: 7pt;line-height: 1; border: none;white-space: nowrap;padding: 0.5em;">
+                    Rte Fte</th>
+                <th
+                    style="padding-left: 25px;font-size: 7pt;line-height: 1; border: none;white-space: nowrap;padding: 0.5em;">
+                    Rte ICA</th>
+                <th
+                    style="padding-left: 25px;font-size: 7pt;line-height: 1; border: none;white-space: nowrap;padding: 0.5em;">
+                    Rte IVA
+                </th>
+                <th
+                    style="padding-left: 25px;font-size: 7pt;line-height: 1; border: none;white-space: nowrap;padding: 0.5em;">
+                    Rte Iva Simpl</th>
+                <th
+                    style="padding-left: 25px;font-size: 7pt;line-height: 1; border: none;white-space: nowrap;padding: 0.5em;">
+                    Cree</th>
+                <th
+                    style="padding-left: 25px;font-size: 7pt;line-height: 1; border: none;white-space: nowrap;padding: 0.5em;">
+                    Total
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach ($detalleCompras as $detCompras)
+                <tr>
+                    <td
+                        style="white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 6pt; border: none;text-align:left">
+                        {{ $detCompras->descripcion }}
+                    </td>
+                    <td
+                        style="padding-left: 5px; white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 6pt; border: none;text-align:center">
+                        {{ $detCompras->gramos }}
+                    </td>
+                    <td
+                        style="padding-left: 5px; white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 6pt; border: none;text-align:center">
+                        {{ $detCompras->subtotal }}
+                    </td>
+                    <td
+                        style="padding-left: 5px; white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 6pt; border: none;text-align:center">
+                        {{ $detCompras->valor_iva }}
+                    </td>
+                    <td
+                        style="padding-left: 5px; white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 6pt; border: none;text-align:center">
+                        {{ $detCompras->rte_fte }}
+                    </td>
+                    <td
+                        style="padding-left: 5px; white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 6pt; border: none;text-align:center">
+                        {{ $detCompras->rte_ica }}
+                    </td>
+                    <td
+                        style="padding-left: 5px; white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 6pt; border: none;text-align:center">
+                        {{ $detCompras->rte_iva }}
+                    </td>
+                    <td
+                        style="padding-left: 5px; white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 6pt; border: none;text-align:center">
+                        {{ $detCompras->rte_iva_simpl }}
+                    </td>
+
+                    <td
+                        style="padding-left: 5px; white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 6pt; border: none;text-align:center">
+                        {{ $detCompras->cree }}
+                    </td>
+                    <td
+                        style="padding-left: 5px; white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 6pt; border: none;text-align:center">
+                        {{ $detCompras->total }}
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 
 
+    <table style="border-collapse: collapse;margin: 1px;border: 0.5px black solid;line-height: 1; width:750px">
 
+        <caption style="padding: 10px;">
+            <p class="title-head"><strong>DETALLE OTROS INGRESOS</strong></p>
+        </caption>
+        <thead>
+            <tr>
+                <th
+                    style="padding-left: 24px;font-size: 7pt;line-height: 1; border: none;white-space: nowrap;padding: 0.5em;">
+                    Tipo Ingreso</th>
+                <th
+                    style="padding-left: 30px;font-size: 7pt;line-height: 1; border: none;white-space: nowrap;padding: 0.5em;">
+                    Descripción</th>
+                <th
+                    style="padding-left: 24px;font-size: 7pt;line-height: 1; border: none;white-space: nowrap;padding: 0.5em;">
+                    Valor</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach ($detalleOtrosIngresos as $detOtrsoIngresos)
+                <tr>
+                    <td
+                        style="white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 6pt; border: none;text-align:justify">
+                        {{ $detOtrsoIngresos->tipo_ingreso }}
+                    </td>
+                    <td
+                        style="padding-left: 25px; white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 6pt; border: none;text-align:center">
+                        {{ $detOtrsoIngresos->descripcion }}
+                    </td>
+                    <td
+                        style="padding-left: 25px; white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 6pt; border: none;text-align:center">
+                        {{ $detOtrsoIngresos->valor }}
+                    </td>
+
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+
+
+    <table style="margin: 1px;border: 0.5px black solid;">
+        <caption style="padding: 10px;">
+            <p class="title-head"><strong>DETALLE DE EGRESOS</strong></p>
+        </caption>
+        <thead>
+            <tr>
+                <th
+                    style="white-space: nowrap;font-size: 7pt;line-height: 1; border: none;padding: 0.8em;padding-left:10px">
+                    Tipo Egreso/Gasto</th>
+                <th style="font-size: 7pt;line-height: 1; border: none;padding: 0.8em;padding-left:15px">
+                    Descripción
+                </th>
+                <th style=";font-size: 7pt;line-height: 1; border: none;padding: 0.8em;">
+                    Subtotal</th>
+                <th
+                    style="font-size: 7pt;line-height: 1; border: none;padding: 0.8em; white-space: nowrap;padding-right:5px">
+                    Valor Iva</th>
+                <th
+                    style="font-size: 7pt;line-height: 1; border: none;padding: 0.8em; white-space: nowrap;padding-right:5px">
+                    Vlr Rte Fte
+                </th>
+                <th
+                    style="font-size: 7pt;line-height: 1; border: none;padding: 0.8em; white-space: nowrap;padding-right:5px">
+                    Vlr Rte Iva</th>
+
+                <th
+                    style="font-size: 7pt;line-height: 1; border: none;padding: 0.8em; white-space: nowrap;padding-right:5px">
+                    Valor Rte Ica
+                </th>
+                <th
+                    style="font-size: 7pt;line-height: 1; border: none;padding: 0.8em; white-space: nowrap;padding-right:5px">
+                    Vlr Cree</th>
+
+                <th
+                    style="font-size: 7pt;line-height: 1; border: none;padding: 0.8em; white-space: nowrap;padding-left:10px">
+                    Valor</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach ($detalleEgresos as $detEgresos)
+                <tr>
+                    <td style="line-height: 1; font-size: 6pt; border: none;text-align:left">
+                        {{ $detEgresos->tipo_egreso }}</td>
+                    <td
+                        style="padding-left:20px;line-height: 1; font-size: 6pt;border: none;text-align:justify;width: 230px;">
+                        {{ $detEgresos->descripcion }}</td>
+                    <td style="line-height: 1; font-size: 6pt; border: none;text-align:center">
+                        {{ $detEgresos->subtotal }}</td>
+                    <td style="line-height: 1; font-size: 6pt; border: none;text-align:center">
+                        {{ $detEgresos->vlr_iva }}</td>
+                    <td style="line-height: 1; font-size: 6pt; border: none;text-align:center">
+                        {{ $detEgresos->vlr_rte_fte }}</td>
+                    <td style="line-height: 1; font-size: 6pt; border: none;text-align:center">
+                        {{ $detEgresos->vlr_rte_iva }}</td>
+                    <td style="line-height: 1; font-size: 6pt; border: none;text-align:center">
+                        {{ $detEgresos->vlr_rte_ica }}</td>
+                    <td style="line-height: 1; font-size: 6pt; border: none;text-align:center">
+                        {{ $detEgresos->vlr_rte_cree }}</td>
+                    <td style="line-height: 1; font-size: 6pt; border: none;text-align:right">
+                        {{ $detEgresos->valor }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+
+
+    <table style="margin: 1px;border: 0.5px black solid;">
+        <caption style="padding: 10px;">
+            <p class="title-head"><strong>DETALLE DE GASTOS</strong></p>
+        </caption>
+        <thead>
+            <tr>
+                <th
+                    style="white-space: nowrap;font-size: 7pt;line-height: 1; border: none;padding: 0.8em;padding-left:10px">
+                    Tipo Egreso/Gasto</th>
+                <th style="font-size: 7pt;line-height: 1; border: none;padding: 0.8em;padding-left:15px">
+                    Descripción
+                </th>
+                <th style=";font-size: 7pt;line-height: 1; border: none;padding: 0.8em;">
+                    Subtotal</th>
+                <th
+                    style="font-size: 7pt;line-height: 1; border: none;padding: 0.8em; white-space: nowrap;padding-right:5px">
+                    Valor Iva</th>
+                <th
+                    style="font-size: 7pt;line-height: 1; border: none;padding: 0.8em; white-space: nowrap;padding-right:5px">
+                    Vlr Rte Fte
+                </th>
+                <th
+                    style="font-size: 7pt;line-height: 1; border: none;padding: 0.8em; white-space: nowrap;padding-right:5px">
+                    Vlr Rte Iva</th>
+
+                <th
+                    style="font-size: 7pt;line-height: 1; border: none;padding: 0.8em; white-space: nowrap;padding-right:5px">
+                    Valor Rte Ica
+                </th>
+                <th
+                    style="font-size: 7pt;line-height: 1; border: none;padding: 0.8em; white-space: nowrap;padding-right:5px">
+                    Vlr Cree</th>
+
+                <th
+                    style="font-size: 7pt;line-height: 1; border: none;padding: 0.8em; white-space: nowrap;padding-left:10px">
+                    Valor</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach ($detalleGastos as $detGastos)
+                <tr>
+                    <td style="line-height: 1; font-size: 6pt; border: none;text-align:left">
+                        {{ $detGastos->tipo_egreso }}</td>
+                    <td
+                        style="padding-left:20px;line-height: 1; font-size: 6pt; border: none;text-align:justify;width: 230px;">
+                        {{ $detGastos->descripcion }}</td>
+                    <td style="line-height: 1; font-size: 6pt; border: none; text-align:center">
+                        {{ $detGastos->subtotal }}</td>
+                    <td style="line-height: 1; font-size: 6pt; border: none; text-align:center">
+                        {{ $detGastos->vlr_iva }}</td>
+                    <td style="line-height: 1; font-size: 6pt; border: none;text-align:center">
+                        {{ $detGastos->vlr_rte_fte }}</td>
+                    <td style="line-height: 1; font-size: 6pt; border: none;text-align:center">
+                        {{ $detGastos->vlr_rte_iva }}</td>
+                    <td style="line-height: 1; font-size: 6pt; border: none;text-align:center">
+                        {{ $detGastos->vlr_rte_ica }}</td>
+                    <td style="line-height: 1; font-size: 6pt; border: none;text-align:center">
+                        {{ $detGastos->vlr_rte_cree }}</td>
+                    <td style="line-height: 1; font-size: 6pt; border: none;text-align:right">
+                        {{ $detGastos->valor }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 
     <br>
     <li class="list-style">

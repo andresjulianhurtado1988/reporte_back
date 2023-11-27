@@ -16,6 +16,10 @@ use App\Models\DetalleResolucionContratosVencidos;
 use App\Models\DetalleSalidaDecomision;
 use App\Models\DetalleArticulosTrasladosEntrada;
 use App\Models\DetalleArticulosTrasladosSalida;
+use App\Models\DetalleCompras;
+use App\Models\DetalleOtrosIngresos;
+use App\Models\DetalleEgresos;
+use App\Models\DetalleGastos;
 
 class ConsolidadoController extends Controller
 {
@@ -30,6 +34,10 @@ class ConsolidadoController extends Controller
         $detalleSalidasXDecomision = DetalleSalidaDecomision::all();
         $detalleArticulosTrasladosEntrada = DetalleArticulosTrasladosEntrada::all();
         $detalleArticulosTrasladoSalida = DetalleArticulosTrasladosSalida::all();
+        $detalleCompras = DetalleCompras::all();
+        $detalleOtrosIngresos = DetalleOtrosIngresos::all();
+        $detalleEgresos = DetalleEgresos::all();
+        $detalleGastos = DetalleGastos::all();
 
 
         $pdf = Pdf::loadView(
@@ -42,7 +50,11 @@ class ConsolidadoController extends Controller
                 'detalleResolContVencidos',
                 'detalleSalidasXDecomision',
                 'detalleArticulosTrasladosEntrada',
-                'detalleArticulosTrasladoSalida'
+                'detalleArticulosTrasladoSalida',
+                'detalleCompras',
+                'detalleOtrosIngresos',
+                'detalleEgresos',
+                'detalleGastos'
             )
         );
 
