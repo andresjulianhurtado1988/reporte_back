@@ -26,6 +26,21 @@ class ConsolidadoController extends Controller
     public function reportePdfConsolidado(Request $request)
     {
 
+
+        $detallerIngresos = $this->ingresosData();
+        $detalleEgresos = $this->egresosData();
+
+        $ingresosContratos = $detallerIngresos['contratos'];
+        $ingresosAlmacen = $detallerIngresos['almacen'];
+        $ingresosTotal = $detallerIngresos['total'];
+
+        $egresosContratos = $detalleEgresos['contratos'];
+        $egresosAlmacen = $detalleEgresos['almacen'];
+        $egresosTotal = $detalleEgresos['total'];
+
+
+
+
         $detalleRetroventaContratos = DetalleRetroventaContratos::all();
         $detalleContratoNuevo = DetalleContratoNuevo::all();
         $detalleVentas = Ventas::all();
@@ -41,8 +56,14 @@ class ConsolidadoController extends Controller
 
 
         $pdf = Pdf::loadView(
-            '/pdfConsolDatos',
+            '/pdfConsolidadoDatos',
             compact(
+                'ingresosContratos',
+                'ingresosAlmacen',
+                'ingresosTotal',
+                'egresosContratos',
+                'egresosAlmacen',
+                'egresosTotal',
                 'detalleRetroventaContratos',
                 'detalleContratoNuevo',
                 'detalleVentas',

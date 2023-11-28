@@ -32,28 +32,6 @@
             text-align: center;
         }
 
-        /*INICIO ESTILOS PARA LA TABLA*/
-        /* .page-break {
-            page-break-inside: auto;
-        } */
-
-        /*
-        table.table-bordered>thead>tr>th {
-            border: 0.5px solid #a1a1a1;
-            padding: 4px;
-        }
-
-        table.table-bordered>tbody>tr>td {
-            border: 0.5px solid #a1a1a1;
-            padding: 4px;
-        }
-
-        .table {
-            width: 100%;
-        } */
-
-        /*FIN ESTILOS PARA LA TABLA*/
-
         table td {
             vertical-align: top;
             margin: 1px;
@@ -89,7 +67,7 @@
         }
 
         .list-size-values {
-            font-size: 6pt;
+            font-size: 7pt;
         }
 
         .title-head {
@@ -104,43 +82,42 @@
 </head>
 
 <body>
-    <!-- Defina bloques de encabezado y pie de página antes de su contenido -->
     <header>
-        <table>
-            <thead>
-                <tr style="width:200px;">
 
-                    <p style="line-height: 0.0;font-size: 8pt;margin-left:250px; "><strong></strong>
+        <p style="line-height: 0.0;font-size: 8pt;text-align:center; "><strong>CUADRE DE CAJA</strong>
+        </p>
+        <p style="line-height: 0.0;font-size: 7pt;text-align:right; margin-top:20px"><strong>Usuario: </strong>ANLOPEZ
+        </p>
+        <table style="border-collapse: collapse;">
+            <tr>
+                <th>
+                    <p style="line-height: 1;font-size: 7pt;text-align:left;width:300px">
+                        <strong>JOYERÍA LOS DENARIOS</strong>
                     </p>
-
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="no-border">
-                        <p style="line-height: 0.0; font-size: 6pt; align-text: justify;"></p>
-                    </td>
-                    <td class="no-border">
-
-                    </td>
-
-                </tr>
-                <tr>
-                    <td class="no-border">
-                        <p style="line-height: 0.0;font-size: 8pt;"></p>
-                    </td>
-                    <td class="no-border">
-
-
-                    </td>
-                    <td class="no-border">
-
-                    </td>
-                </tr>
-            </tbody>
-
+                </th>
+                <th>
+                    <p style="line-height: 1;font-size: 7pt;text-align:right;margin-left:320px">
+                        <strong>SECUENCIA: ABC123</strong>
+                    </p>
+                </th>
+            </tr>
         </table>
+
         <hr>
+        <table style="border-collapse: collapse;margin-top:1px;">
+            <tr>
+                <th>
+                    <p style="line-height: 1;font-size: 7pt;text-align:left; margin-left: 235px;">
+                        <strong>Fecha Inicial: </strong>28/11/2023
+                    </p>
+                </th>
+                <th>
+                    <p style="line-height: 1;font-size: 7pt;text-align:right; margin-left: 40px;">
+                        <strong>Fecha Fin: </strong>28/11/2023
+                    </p>
+                </th>
+            </tr>
+        </table>
 
     </header>
 
@@ -153,6 +130,153 @@
             </p>
         </li>
     </footer>
+    <table style="border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <td style="width: 366px;">
+                    <p class="title-head"><strong>INGRESOS</strong></p>
+                    <table style="margin-left: 20px;">
+                        <tbody>
+                            <tr>
+                                <td class="no-border">
+                                    <li class="list-style">
+                                        <p class="list-size-title"><strong>Contratos:</strong></p>
+                                    </li>
+                                </td>
+                                <td class="no-border">
+                                    @foreach ($ingresosContratos as $con)
+                                        <li class="list-style" style="margin-left: 45px">
+                                            <p class="list-size-values">
+                                                {{ $con['column_name'] }}: </p>
+                                        </li>
+                                    @endforeach
+                                </td>
+                                <td class="no-border">
+                                    @foreach ($ingresosContratos as $con)
+                                        <li class="list-style" style="margin-left: 45px">
+                                            <p class="list-size-values">{{ $con['valores'] }}
+                                            </p>
+                                        </li>
+                                    @endforeach
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="no-border">
+                                    <li class="list-style">
+                                        <p class="list-size-title"><strong>Almacén:</strong></p>
+                                    </li>
+                                </td>
+
+                                <td class="no-border">
+                                    @foreach ($ingresosAlmacen as $con)
+                                        <li class="list-style" style="margin-left: 45px">
+                                            <p class="list-size-values">
+                                                {{ $con['column_name'] }}: </p>
+                                        </li>
+                                    @endforeach
+                                </td>
+                                <td class="no-border">
+                                    @foreach ($ingresosAlmacen as $con)
+                                        <li class="list-style" style="margin-left: 45px">
+                                            <p class="list-size-values">{{ $con['valores'] }}
+                                            </p>
+                                        </li>
+                                    @endforeach
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="no-border">
+                                    <li class="list-style">
+                                    </li>
+                                </td>
+                                <td class="no-border">
+                                    <li class="list-style" style="margin-left: 45px">
+                                        <p class="list-size-title"><strong>Total Ingresos:</strong></p>
+                                    </li>
+                                </td>
+                                <td class="no-border">
+                                    <li class="list-style" style="margin-left: 45px">
+                                        <p class="list-size-values">{{ $ingresosTotal }}</p>
+                                    </li>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td style="width: 374px;">
+                    <p class="title-head"><strong>EGRESOS</strong></p>
+                    <table style="margin-left: 30px">
+                        <tbody>
+                            <tr>
+                                <td class="no-border">
+                                    <li class="list-style">
+                                        <p class="list-size-title"><strong>Contratos:</strong></p>
+                                    </li>
+                                </td>
+                                <td class="no-border">
+                                    @foreach ($egresosContratos as $con)
+                                        <li class="list-style" style="margin-left: 45px">
+                                            <p class="list-size-values">
+                                                {{ $con['column_name'] }}: </p>
+                                        </li>
+                                    @endforeach
+                                </td>
+                                <td class="no-border">
+                                    @foreach ($egresosContratos as $con)
+                                        <li class="list-style" style="margin-left: 45px">
+                                            <p class="list-size-values">{{ $con['valores'] }}
+                                            </p>
+                                        </li>
+                                    @endforeach
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="no-border">
+                                    <li class="list-style">
+                                        <p class="list-size-title"><strong>Almacén:</strong></p>
+                                    </li>
+                                </td>
+
+                                <td class="no-border">
+                                    @foreach ($egresosAlmacen as $con)
+                                        <li class="list-style" style="margin-left: 45px">
+                                            <p class="list-size-values">
+                                                {{ $con['column_name'] }}: </p>
+                                        </li>
+                                    @endforeach
+                                </td>
+                                <td class="no-border">
+                                    @foreach ($egresosAlmacen as $con)
+                                        <li class="list-style" style="margin-left: 45px">
+                                            <p class="list-size-values">{{ $con['valores'] }}
+                                            </p>
+                                        </li>
+                                    @endforeach
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="no-border">
+                                    <li class="list-style">
+                                    </li>
+                                </td>
+                                <td class="no-border">
+                                    <li class="list-style" style="margin-left: 45px">
+                                        <p class="list-size-title"><strong>Total Egresos:</strong></p>
+                                    </li>
+                                </td>
+                                <td class="no-border">
+                                    <li class="list-style" style="margin-left: 45px">
+                                        <p class="list-size-values">{{ $egresosTotal }}</p>
+                                    </li>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
     <table style="border-collapse: collapse;">
         <tbody>
             <tr>
@@ -237,7 +361,6 @@
             </tr>
         </tbody>
     </table>
-
 
     <table style="border-collapse: collapse;">
         <tbody>
@@ -493,7 +616,6 @@
         </tbody>
     </table>
 
-
     <table style="border-collapse: collapse;margin: 1px;border: 0.5px black solid;line-height: 1;">
 
         <caption style="padding: 10px;">
@@ -588,8 +710,6 @@
         </tbody>
     </table>
 
-
-
     <table style="border-collapse: collapse;margin: 1px;border: 0.5px black solid;line-height: 1; width:750px">
 
         <caption style="padding: 10px;">
@@ -680,7 +800,6 @@
             @endforeach
         </tbody>
     </table>
-
 
     <table style="border-collapse: collapse;margin: 1px;border: 0.5px black solid;line-height: 1; width:750px">
 
@@ -859,6 +978,50 @@
         </tbody>
     </table>
 
+    <table style="border-collapse: collapse;margin: 1px;border: 0.5px black solid;line-height: 1; width:750px">
+
+        <caption style="padding: 10px;">
+            <p class="title-head"><strong>TOTALES</strong></p>
+        </caption>
+        <thead>
+            <tr>
+                <th
+                    style="padding-left: 24px;font-size: 8pt;line-height: 1; border: none;white-space: nowrap;padding: 0.5em;">
+                    <strong>SALDO INICIAL EN CAJA</strong>
+                </th>
+                <th
+                    style="padding-left: 30px;font-size: 8pt;line-height: 1; border: none;white-space: nowrap;padding: 0.5em;">
+                    <strong>SALDO EN CAJA ACTUAL</strong>
+                </th>
+                <th
+                    style="padding-left: 24px;font-size: 8pt;line-height: 1; border: none;white-space: nowrap;padding: 0.5em;">
+                    <strong>Total Ingresos - Egresos</strong>
+                </th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td
+                    style="white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 7pt; border: none;text-align:center">
+                    41.458.200,00
+                </td>
+                <td
+                    style="padding-left: 25px; white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 7pt; border: none;text-align:center">
+                    18.792.530,00
+                </td>
+                <td
+                    style="padding-left: 25px; white-space: nowrap;line-height: 1;padding: 4px; margin: 1px; font-size: 7pt; border: none;text-align:center">
+                    -22.665.670,00
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
     <br>
     <li class="list-style">
         <p class="list-size-title">Usuario: <strong>Juan Ángel López Builes</strong></p>
@@ -874,7 +1037,7 @@
        if ( isset($pdf) ) {
            $pdf->page_script('
                $font = $fontMetrics->get_font("Arial, Helvetica, sans-serif", "normal");
-               $pdf->text(520, 10, "Página $PAGE_NUM de $PAGE_COUNT", $font, 8);
+               $pdf->text(525, 10, "Página $PAGE_NUM de $PAGE_COUNT", $font, 8);
            ');
        }
    </script>

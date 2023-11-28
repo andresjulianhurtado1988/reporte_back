@@ -82,66 +82,44 @@
  <body>
      <!-- Defina bloques de encabezado y pie de página antes de su contenido -->
      <header>
-         <table>
-             <thead>
-                 <tr style="width:200px;">
 
-                     <p style="line-height: 0.0;font-size: 8pt;margin-left:250px; "><strong>CUADRE DE
-                             CAJA</strong>
-                     </p>
+        <p style="line-height: 0.0;font-size: 8pt;text-align:center; "><strong>CUADRE DE CAJA</strong>
+        </p>
+        <p style="line-height: 0.0;font-size: 7pt;text-align:right; margin-top:20px"><strong>Usuario: </strong>ANLOPEZ
+        </p>
+        <table style="border-collapse: collapse;">
+            <tr>
+                <th>
+                    <p style="line-height: 1;font-size: 7pt;text-align:left;width:300px">
+                        <strong>JOYERÍA LOS DENARIOS</strong>
+                    </p>
+                </th>
+                <th>
+                    <p style="line-height: 1;font-size: 7pt;text-align:right;margin-left:320px">
+                        <strong>SECUENCIA: ABC123</strong>
+                    </p>
+                </th>
+            </tr>
+        </table>
 
-                 </tr>
-             </thead>
-             <tbody>
-                 <tr>
-                     <td class="no-border">
-                         <p style="line-height: 0.0; font-size: 6pt; align-text: justify;"></p>
-                     </td>
-                     <td class="no-border">
-                         <p style="font-size: 8pt; width:100px; align-text: right;">
-                             <strong>Secuencia:
-                             </strong>3401
-                         </p>
-                     </td>
+        <hr>
+        <table style="border-collapse: collapse;margin-top:1px;">
+            <tr>
+                <th>
+                    <p style="line-height: 1;font-size: 7pt;text-align:left; margin-left: 235px;">
+                        <strong>Fecha Inicial: </strong>28/11/2023
+                    </p>
+                </th>
+                <th>
+                    <p style="line-height: 1;font-size: 7pt;text-align:right; margin-left: 40px;">
+                        <strong>Fecha Fin: </strong>28/11/2023
+                    </p>
+                </th>
+            </tr>
+        </table>
 
-                 </tr>
-                 <tr>
-                     <td class="no-border">
-                         <p style="line-height: 0.0;font-size: 8pt;"></p>
-                     </td>
-                     <td class="no-border">
-                         {{-- aquí podría ir la dirección de la joyería en caso de que sea una sola joyería --}}
-                         <p style="line-height: 0.0;font-size: 6pt; align-text: center;width:300px">
-                             NIT. 900.392.919-9
-                             NEGOCIOS
-                             VALLE DEL ABURRA S.A.S RESPONSABEL DE IVA</p>
-                     </td>
-                     <td class="no-border">
-                         <p style="font-size: 6pt; width:100px; align-text: right;">
-                             Usuario: <strong>ANLOPEZ</strong></p>
-                     </td>
-                 </tr>
-             </tbody>
+    </header>
 
-         </table>
-         <hr>
-         <table style="align-content: center">
-             <thead>
-                 <tr style="line-height: 0.1;">
-                     <th>
-                         <p style="font-size: 6pt; align-text: left; width:450px"><strong>Fecha Inicial:
-                                 31/07/2023</strong>
-                         </p>
-                     </th>
-                     <th>
-                         <p style="font-size: 6pt; align-text: right; width:120px"><strong>Fecha Final:
-                                 31/07/2023</strong>
-                         </p>
-                     </th>
-                 </tr>
-             </thead>
-         </table>
-     </header>
 
      <footer>
          <li class="list-style">
