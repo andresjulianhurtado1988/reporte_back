@@ -91,7 +91,7 @@
             <tr>
                 <th>
                     <p style="line-height: 1;font-size: 7pt;text-align:left;width:300px">
-                        <strong>JOYERÍA LOS DENARIOS</strong>
+                        <strong>Código: JOYERÍA LOS DENARIOS</strong>
                     </p>
                 </th>
                 <th>

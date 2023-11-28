@@ -92,7 +92,7 @@
             <tr>
                 <th>
                     <p style="line-height: 1;font-size: 7pt;text-align:left;width:300px">
-                        <strong>JOYERÍA LOS DENARIOS</strong>
+                        <strong>Código: JOYERÍA LOS DENARIOS</strong>
                     </p>
                 </th>
                 <th>
@@ -135,6 +135,7 @@
             <tr>
                 <td style="width: 366px;">
                     <p class="title-head"><strong>INGRESOS</strong></p>
+                    <hr>
                     <table style="margin-left: 20px;">
                         <tbody>
                             <tr>
@@ -205,6 +206,7 @@
                 </td>
                 <td style="width: 374px;">
                     <p class="title-head"><strong>EGRESOS</strong></p>
+                    <hr>
                     <table style="margin-left: 30px">
                         <tbody>
                             <tr>
@@ -282,6 +284,7 @@
             <tr>
                 <td>
                     <p class="title-head"><strong>DETALLE RETROVENTAS CONTRATOS</strong></p>
+                    <hr>
                     <table style="margin-left:2px">
                         <thead>
                             <tr style="width: 180px;">
@@ -320,6 +323,7 @@
                 </td>
                 <td>
                     <p class="title-head"><strong>DETALLE CONTRATOS NUEVOS</strong></p>
+                    <hr>
                     <table style="margin-left: 2px">
                         <thead>
                             <tr style="width: 200px;">
@@ -367,6 +371,7 @@
             <tr>
                 <td style="width: 366px;">
                     <p class="title-head"><strong>DETALLE RESOLUCIONES CONTRATOS VENCIDOS</strong></p>
+                    <hr>
                     <table style="margin-left:2px;">
                         <thead>
                             <tr>
@@ -405,6 +410,7 @@
                 </td>
                 <td style="width: 374px;">
                     <p class="title-head"><strong>DETALLE SALIDAS POR DECOMISOS Y/O P. LEGALES</strong></p>
+                    <hr>
                     <table style="margin-left: 2px">
                         <thead>
                             <tr style="width: 200px;">
@@ -452,6 +458,7 @@
             <tr>
                 <td style="width: 366px;">
                     <p class="title-head"><strong>DETALLE ARTÍCULOS TRASLADADOS (SALIDA)</strong></p>
+                    <hr>
                     <table style="margin-left:2px;">
                         <thead>
                             <tr>
@@ -489,6 +496,7 @@
                 <td style="width: 374px;">
                     <p class="title-head"><strong>DETALLE ARTÍCULOS TRASLADADOS (ENTRADA)
                         </strong></p>
+                        <hr>
                     <table style="margin-left: 2px">
                         <thead>
                             <tr style="width: 200px;">
@@ -842,7 +850,6 @@
         </tbody>
     </table>
 
-
     <table style="margin: 1px;border: 0.5px black solid;">
         <caption style="padding: 10px;">
             <p class="title-head"><strong>DETALLE DE EGRESOS</strong></p>
@@ -909,7 +916,6 @@
             @endforeach
         </tbody>
     </table>
-
 
     <table style="margin: 1px;border: 0.5px black solid;">
         <caption style="padding: 10px;">
