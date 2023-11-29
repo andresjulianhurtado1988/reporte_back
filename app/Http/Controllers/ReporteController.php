@@ -43,6 +43,9 @@ class ReporteController extends Controller
 
         //   $misTiendas = $params_array['misTiendas'];
 
+        $misTiendas = [1];
+        // $misTiendas = [1, 3, 5, 7, 4];
+
         $ingresos = $this->ingresosData();
         $egresos = $this->egresosData();
         $detVentaArticulo = $this->detalleVentaArticulos();
@@ -100,7 +103,8 @@ class ReporteController extends Controller
                 'detalleContratoNuevo',
                 'detalleRetroventaContratos',
                 'rangosFacturasDocumentos',
-                'fileName'
+                'fileName',
+                'misTiendas'
             )
         );
         return $pdf->stream();

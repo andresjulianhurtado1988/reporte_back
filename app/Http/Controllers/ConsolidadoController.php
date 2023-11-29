@@ -26,6 +26,10 @@ class ConsolidadoController extends Controller
     public function reportePdfConsolidado(Request $request)
     {
 
+        $misTiendas = [1];
+     //   $misTiendas = [1, 3, 5, 7, 4];
+
+        $tiendas = count($misTiendas);
 
         $detallerIngresos = $this->ingresosData();
         $detalleEgresos = $this->egresosData();
@@ -37,9 +41,6 @@ class ConsolidadoController extends Controller
         $egresosContratos = $detalleEgresos['contratos'];
         $egresosAlmacen = $detalleEgresos['almacen'];
         $egresosTotal = $detalleEgresos['total'];
-
-
-
 
         $detalleRetroventaContratos = DetalleRetroventaContratos::all();
         $detalleContratoNuevo = DetalleContratoNuevo::all();
@@ -75,7 +76,8 @@ class ConsolidadoController extends Controller
                 'detalleCompras',
                 'detalleOtrosIngresos',
                 'detalleEgresos',
-                'detalleGastos'
+                'detalleGastos',
+                'tiendas'
             )
         );
 
@@ -133,7 +135,6 @@ class ConsolidadoController extends Controller
         ];
 
     }
-
     public function egresosData()
     {
 

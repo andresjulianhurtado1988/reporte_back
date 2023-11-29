@@ -82,44 +82,49 @@
  <body>
      <!-- Defina bloques de encabezado y pie de página antes de su contenido -->
      <header>
-
-        <p style="line-height: 0.0;font-size: 8pt;text-align:center; "><strong>CUADRE DE CAJA</strong>
-        </p>
-        <p style="line-height: 0.0;font-size: 7pt;text-align:right; margin-top:20px"><strong>Usuario: </strong>ANLOPEZ
-        </p>
-        <table style="border-collapse: collapse;">
-            <tr>
-                <th>
-                    <p style="line-height: 1;font-size: 7pt;text-align:left;width:300px">
-                        <strong>Código: JOYERÍA LOS DENARIOS</strong>
-                    </p>
-                </th>
-                <th>
-                    <p style="line-height: 1;font-size: 7pt;text-align:right;margin-left:320px">
-                        <strong>SECUENCIA: ABC123</strong>
-                    </p>
-                </th>
-            </tr>
-        </table>
-
-        <hr>
-        <table style="border-collapse: collapse;margin-top:1px;">
-            <tr>
-                <th>
-                    <p style="line-height: 1;font-size: 7pt;text-align:left; margin-left: 235px;">
-                        <strong>Fecha Inicial: </strong>28/11/2023
-                    </p>
-                </th>
-                <th>
-                    <p style="line-height: 1;font-size: 7pt;text-align:right; margin-left: 40px;">
-                        <strong>Fecha Fin: </strong>28/11/2023
-                    </p>
-                </th>
-            </tr>
-        </table>
-
-    </header>
-
+         <p style="line-height: 0.0;font-size: 8pt;text-align:center; "><strong>CUADRE DE CAJA</strong>
+         </p>
+         <p style="line-height: 0.0;font-size: 7pt;text-align:right; margin-top:20px"><strong>Usuario: </strong>ANLOPEZ
+         </p>
+         @if ($tiendas > 1)
+             <p style="line-height: 1;font-size: 7pt;text-align:left;width:720px">
+                 Código: JOYERÍA LOS DENARIOS, Código: JOYERÍA LOS DENARIOS, Código: JOYERÍA LOS
+                 DENARIOS, Código: JOYERÍA LOS DENARIOS, Código: JOYERÍA LOS DENARIOS, Código: JOYERÍA LOS
+                 DENARIOS, Código: JOYERÍA LOS DENARIOS, Código: JOYERÍA LOS DENARIOS, Código: JOYERÍA LOS
+                 DENARIOS, Código: JOYERÍA LOS DENARIOS
+             </p>
+         @else
+             <table style="border-collapse: collapse;">
+                 <tr>
+                     <th>
+                         <p style="line-height: 1;font-size: 7pt;text-align:left;width:300px">
+                             <strong>Código: JOYERÍA LOS DENARIOS</strong>
+                         </p>
+                     </th>
+                     <th>
+                         <p style="line-height: 1;font-size: 7pt;text-align:right;margin-left:320px">
+                             <strong>SECUENCIA: ABC123</strong>
+                         </p>
+                     </th>
+                 </tr>
+             </table>
+         @endif
+         <hr>
+         <table style="border-collapse: collapse;margin-top:1px;">
+             <tr>
+                 <th>
+                     <p style="line-height: 1;font-size: 7pt;text-align:left; margin-left: 235px;">
+                         <strong>Fecha Inicial: </strong>28/11/2023
+                     </p>
+                 </th>
+                 <th>
+                     <p style="line-height: 1;font-size: 7pt;text-align:right; margin-left: 40px;">
+                         <strong>Fecha Fin: </strong>28/11/2023
+                     </p>
+                 </th>
+             </tr>
+         </table>
+     </header>
 
      <footer>
          <li class="list-style">
