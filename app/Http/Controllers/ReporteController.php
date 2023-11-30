@@ -82,7 +82,6 @@ class ReporteController extends Controller
         $detalleRetroventaContratos = $detalleRetroventaContratos['detalleRetroventaContratos'];
 
         // DATOS RANGOS FACTURAS Y/O DOCUMENTOS
-
         $rangosFacturasDocumentos = $rangosFacturasDocumentos['rangosFacturasDocumentos'];
 
         $fileName = "pdfDatos";
@@ -107,8 +106,8 @@ class ReporteController extends Controller
                 'misTiendas'
             )
         );
-        return $pdf->stream();
 
+        return $pdf->stream();
 
     }
 

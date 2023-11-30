@@ -20,16 +20,50 @@ use App\Models\DetalleCompras;
 use App\Models\DetalleOtrosIngresos;
 use App\Models\DetalleEgresos;
 use App\Models\DetalleGastos;
+use App\Models\Joyerias;
 
 class ConsolidadoController extends Controller
 {
+
+    public function allJoyerias()
+    {
+
+
+        $data = array(
+            'status' => 'success',
+            'code' => 200,
+            'joyerias' => Joyerias::all()
+        );
+
+        // devolver resultado
+        return response()->json($data, $data['code']);
+
+
+    }
     public function reportePdfConsolidado(Request $request)
     {
 
-        $misTiendas = [1];
-     //   $misTiendas = [1, 3, 5, 7, 4];
+        $arrayJoyerias = array();
 
-        $tiendas = count($misTiendas);
+        $fileName = "pdfDatos";
+
+        $json = $request->input('json', null);
+        $params_array = json_decode($json, true);
+
+        $tiendas = count($params_array['misTiendas']);
+
+
+        $joyerias_cod = DB::table('joyerias')
+            ->select('codigo_joyeria')
+            ->whereIn('id', $params_array['misTiendas'])
+            ->get();
+
+
+        foreach ($joyerias_cod as $key => $value) {
+            array_push($arrayJoyerias, $value->codigo_joyeria);
+        }
+
+        $joyerias_cod = implode(", ", $arrayJoyerias);
 
         $detallerIngresos = $this->ingresosData();
         $detalleEgresos = $this->egresosData();
@@ -59,6 +93,7 @@ class ConsolidadoController extends Controller
         $pdf = Pdf::loadView(
             '/pdfConsolidadoDatos',
             compact(
+                'fileName',
                 'ingresosContratos',
                 'ingresosAlmacen',
                 'ingresosTotal',
@@ -77,7 +112,8 @@ class ConsolidadoController extends Controller
                 'detalleOtrosIngresos',
                 'detalleEgresos',
                 'detalleGastos',
-                'tiendas'
+                'tiendas',
+                'joyerias_cod'
             )
         );
 

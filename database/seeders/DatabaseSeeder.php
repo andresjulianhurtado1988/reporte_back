@@ -33,7 +33,9 @@ class DatabaseSeeder extends Seeder
             DetalleComprasSeed::class,
             DetalleOtrosIngresosSeed::class,
             DetalleEgresosSeeder::class,
-            DetalleGastosSeeder::class
+            DetalleGastosSeeder::class,
+            JoyeriasSeed::class
+
         ]);
     }
 }

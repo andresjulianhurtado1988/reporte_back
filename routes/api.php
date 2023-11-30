@@ -28,6 +28,7 @@ Route::post('/reportePdf', [ReporteController::class, 'reportePdf'])->name('repo
 Route::post('/generarPdf', [ReporteController::class, 'generarPdf'])->name('generarPdf');
 Route::post('/reportePdfConsolidado', [ConsolidadoController::class, 'reportePdfConsolidado'])->name('reportePdfConsolidado');
 Route::post('/generarExcel', [ReporteController::class, 'generarExcel'])->name('generarExcel');
+Route::get('/allJoyerias', [ConsolidadoController::class, 'allJoyerias'])->name('allJoyerias');
 
 
 

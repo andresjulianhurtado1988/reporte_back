@@ -16,13 +16,7 @@ class PDFController extends Controller
         $users = $users->chunk(30);
         $detalleVentas = Ventas::all();
 
-
         $detalleVentas = $detalleVentas->chunk(15);
-
-        $datas = [
-            
-        ];
-
 
         $data = [
 
@@ -30,7 +24,6 @@ class PDFController extends Controller
             'users' => $users,
             'ventas' => $detalleVentas
         ];
-
 
         $pdf = PDF::loadView('myPDF', $data);
 

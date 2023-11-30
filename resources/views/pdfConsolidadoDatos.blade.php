@@ -77,6 +77,18 @@
          .no-border {
              border: none;
          }
+
+         .style-table {
+             border-collapse: collapse;
+             margin: 1px;
+             border: 0.5px black solid;
+         }
+
+         .margin-table {
+             margin: 1px;
+             border: 0.5px black solid;
+
+         }
      </style>
  </head>
 
@@ -89,17 +101,14 @@
          </p>
          @if ($tiendas > 1)
              <p style="line-height: 1;font-size: 7pt;text-align:left;width:720px">
-                 Código: JOYERÍA LOS DENARIOS, Código: JOYERÍA LOS DENARIOS, Código: JOYERÍA LOS
-                 DENARIOS, Código: JOYERÍA LOS DENARIOS, Código: JOYERÍA LOS DENARIOS, Código: JOYERÍA LOS
-                 DENARIOS, Código: JOYERÍA LOS DENARIOS, Código: JOYERÍA LOS DENARIOS, Código: JOYERÍA LOS
-                 DENARIOS, Código: JOYERÍA LOS DENARIOS
+                 <strong>Código: {{ $joyerias_cod }}</strong>
              </p>
          @else
              <table style="border-collapse: collapse;">
                  <tr>
                      <th>
                          <p style="line-height: 1;font-size: 7pt;text-align:left;width:300px">
-                             <strong>Código: JOYERÍA LOS DENARIOS</strong>
+                             <strong>Código: {{ $joyerias_cod }}</strong>
                          </p>
                      </th>
                      <th>
@@ -137,6 +146,7 @@
              </p>
          </li>
      </footer>
+
      <table style="border-collapse: collapse;">
          <tbody>
              <tr>
@@ -295,32 +305,32 @@
                      <table style="margin-left:2px">
                          <thead>
                              <tr style="width: 180px;">
-                                 <th style=" text-align: justify;font-size: 8pt;line-height: 1; border: none;">
+                                 <th style="text-align: justify;font-size: 8pt;line-height: 1; border: none;">
                                      Descripción</th>
-                                 <th style=" text-align: justify;font-size: 8pt;line-height: 1; border: none;">
+                                 <th style="text-align: justify;font-size: 8pt;line-height: 1; border: none;">
                                      Gramos
                                  </th>
-                                 <th style=" text-align: justify;font-size: 8pt;line-height: 1; border: none;">
+                                 <th style="text-align: justify;font-size: 8pt;line-height: 1; border: none;">
                                      Valor
                                      Articulos</th>
                                  <th
-                                     style=" text-align: center;font-size: 8pt;white-space: nowrap;line-height: 1; border: none;">
+                                     style="text-align: center;font-size: 8pt;white-space: nowrap;line-height: 1; border: none;">
                                      Promedio Vlr/Grm</th>
                              </tr>
                          </thead>
                          <tbody>
                              @foreach ($detalleRetroventaContratos as $detArt)
                                  <tr>
-                                     <td style=" text-align: left;white-space: nowrap;line-height: 0.5"
+                                     <td style="text-align: left;white-space: nowrap;line-height: 0.5"
                                          class="style-values">
                                          {{ $detArt->descripcion }}</td>
-                                     <td style=" text-align: justify;padding-left: 10px;padding-right: 25px;line-height: 0.5"
+                                     <td style="text-align: justify;padding-left: 10px;padding-right: 25px;line-height: 0.5"
                                          class="style-values">
                                          {{ $detArt->gramos }}</td>
-                                     <td style=" text-align: justify;padding-left: 10px;padding-right: 25px;line-height: 0.5"
+                                     <td style="text-align: justify;padding-left: 10px;padding-right: 25px;line-height: 0.5"
                                          class="style-values">
                                          {{ $detArt->valor_articulos }}</td>
-                                     <td style=" text-align: center;padding-left: 5px;line-height: 0.5"
+                                     <td style="text-align: center;padding-left: 5px;line-height: 0.5"
                                          class="style-values">
                                          {{ $detArt->promedio }}</td>
                                  </tr>
@@ -334,34 +344,34 @@
                      <table style="margin-left: 2px">
                          <thead>
                              <tr style="width: 200px;">
-                                 <th style=" text-align: justify;font-size: 8pt;line-height: 1; border: none;">
+                                 <th style="text-align: justify;font-size: 8pt;line-height: 1; border: none;">
                                      Descripción</th>
                                  <th
-                                     style=" text-align: left;font-size: 8pt;padding-left: 10px;line-height: 1; border: none;">
+                                     style="text-align: left;font-size: 8pt;padding-left: 10px;line-height: 1; border: none;">
                                      Gramos
                                  </th>
                                  <th
-                                     style=" text-align: justify;font-size: 8pt;padding-left: 20px;line-height: 1; border: none;">
+                                     style="text-align: justify;font-size: 8pt;padding-left: 20px;line-height: 1; border: none;">
                                      Valor
                                      Articulos</th>
                                  <th
-                                     style=" text-align: center;font-size: 8pt;padding-left: 20px;white-space: nowrap;line-height: 1; border: none;">
+                                     style="text-align: center;font-size: 8pt;padding-left: 20px;white-space: nowrap;line-height: 1; border: none;">
                                      Promedio Vlr/Grm</th>
                              </tr>
                          </thead>
                          <tbody>
                              @foreach ($detalleContratoNuevo as $detContNuevo)
                                  <tr>
-                                     <td style=" text-align: left;white-space: nowrap;line-height: 0.5"
+                                     <td style="text-align: left;white-space: nowrap;line-height: 0.5"
                                          class="style-values">
                                          {{ $detContNuevo->descripcion }}</td>
-                                     <td style=" text-align: left;padding-left: 20px;line-height: 0.5"
+                                     <td style="text-align: left;padding-left: 20px;line-height: 0.5"
                                          class="style-values">
                                          {{ $detContNuevo->gramos }}</td>
-                                     <td style=" text-align: justify;padding-left: 30px;line-height: 0.5"
+                                     <td style="text-align: justify;padding-left: 30px;line-height: 0.5"
                                          class="style-values">
                                          {{ $detContNuevo->valor_articulos }}</td>
-                                     <td style=" text-align: center;padding-left: 20px;line-height: 0.5"
+                                     <td style="text-align: center;padding-left: 20px;line-height: 0.5"
                                          class="style-values">
                                          {{ $detContNuevo->promedio }}</td>
                                  </tr>
@@ -382,32 +392,32 @@
                      <table style="margin-left:2px;">
                          <thead>
                              <tr>
-                                 <th style=" text-align: justify;font-size: 8pt;line-height: 1; border: none;">
+                                 <th style="text-align: justify;font-size: 8pt;line-height: 1; border: none;">
                                      Descripción</th>
-                                 <th style=" text-align: justify;font-size: 8pt;line-height: 1; border: none;">
+                                 <th style="text-align: justify;font-size: 8pt;line-height: 1; border: none;">
                                      Gramos
                                  </th>
-                                 <th style=" text-align: justify;font-size: 8pt;line-height: 1; border: none;">
+                                 <th style="text-align: justify;font-size: 8pt;line-height: 1; border: none;">
                                      Valor
                                      Articulos</th>
                                  <th
-                                     style=" text-align: center;font-size: 8pt;white-space: nowrap;line-height: 1; border: none;">
+                                     style="text-align: center;font-size: 8pt;white-space: nowrap;line-height: 1; border: none;">
                                      Promedio Vlr/Grm</th>
                              </tr>
                          </thead>
                          <tbody>
                              @foreach ($detalleResolContVencidos as $detResVencidos)
                                  <tr>
-                                     <td style=" text-align: left;white-space: nowrap;line-height: 0.5"
+                                     <td style="text-align: left;white-space: nowrap;line-height: 0.5"
                                          class="style-values">
                                          {{ $detResVencidos->descripcion }}</td>
-                                     <td style=" text-align: justify;padding-left: 10px;padding-right: 25px;line-height: 0.5"
+                                     <td style="text-align: justify;padding-left: 10px;padding-right: 25px;line-height: 0.5"
                                          class="style-values">
                                          {{ $detResVencidos->gramos }}</td>
-                                     <td style=" text-align: justify;padding-left: 10px;padding-right: 25px;line-height: 0.5"
+                                     <td style="text-align: justify;padding-left: 10px;padding-right: 25px;line-height: 0.5"
                                          class="style-values">
                                          {{ $detResVencidos->valor_articulos }}</td>
-                                     <td style=" text-align: center;padding-left: 5px;line-height: 0.5"
+                                     <td style="text-align: center;padding-left: 5px;line-height: 0.5"
                                          class="style-values">
                                          {{ $detResVencidos->promedio }}</td>
                                  </tr>
@@ -421,34 +431,34 @@
                      <table style="margin-left: 2px">
                          <thead>
                              <tr style="width: 200px;">
-                                 <th style=" text-align: justify;font-size: 8pt;line-height: 1; border: none;">
+                                 <th style="text-align: justify;font-size: 8pt;line-height: 1; border: none;">
                                      Descripción</th>
                                  <th
-                                     style=" text-align: left;font-size: 8pt;padding-left: 10px;line-height: 1; border: none;">
+                                     style="text-align: left;font-size: 8pt;padding-left: 10px;line-height: 1; border: none;">
                                      Gramos
                                  </th>
                                  <th
-                                     style=" text-align: justify;font-size: 8pt;padding-left: 20px;line-height: 1; border: none;">
+                                     style="text-align: justify;font-size: 8pt;padding-left: 20px;line-height: 1; border: none;">
                                      Valor
                                      Articulos</th>
                                  <th
-                                     style=" text-align: center;font-size: 8pt;padding-left: 20px;white-space: nowrap;line-height: 1; border: none;">
+                                     style="text-align: center;font-size: 8pt;padding-left: 20px;white-space: nowrap;line-height: 1; border: none;">
                                      Promedio Vlr/Grm</th>
                              </tr>
                          </thead>
                          <tbody>
                              @foreach ($detalleSalidasXDecomision as $detSalidaDecom)
                                  <tr>
-                                     <td style=" text-align: left;white-space: nowrap;line-height: 0.5"
+                                     <td style="text-align: left;white-space: nowrap;line-height: 0.5"
                                          class="style-values">
                                          {{ $detSalidaDecom->descripcion }}</td>
-                                     <td style=" text-align: left;padding-left: 20px;line-height: 0.5"
+                                     <td style="text-align: left;padding-left: 20px;line-height: 0.5"
                                          class="style-values">
                                          {{ $detSalidaDecom->gramos }}</td>
-                                     <td style=" text-align: justify;padding-left: 30px;line-height: 0.5"
+                                     <td style="text-align: justify;padding-left: 30px;line-height: 0.5"
                                          class="style-values">
                                          {{ $detSalidaDecom->valor_articulos }}</td>
-                                     <td style=" text-align: center;padding-left: 20px;line-height: 0.5"
+                                     <td style="text-align: center;padding-left: 20px;line-height: 0.5"
                                          class="style-values">
                                          {{ $detSalidaDecom->promedio }}</td>
                                  </tr>
@@ -470,14 +480,14 @@
                          <thead>
                              <tr>
                                  <th
-                                     style=" text-align: justify;font-size: 8pt;padding-left: 20px;line-height: 1; border: none;">
+                                     style="text-align: justify;font-size: 8pt;padding-left: 20px;line-height: 1; border: none;">
                                      Descripción</th>
                                  <th
-                                     style=" text-align: justify;font-size: 8pt;padding-left: 40px;line-height: 1; border: none;">
+                                     style="text-align: justify;font-size: 8pt;padding-left: 40px;line-height: 1; border: none;">
                                      Gramos
                                  </th>
                                  <th
-                                     style=" text-align: justify;font-size: 8pt;padding-left: 70px;line-height: 1; border: none;">
+                                     style="text-align: justify;font-size: 8pt;padding-left: 70px;line-height: 1; border: none;">
                                      Valor Compra</th>
 
                              </tr>
@@ -485,13 +495,13 @@
                          <tbody>
                              @foreach ($detalleArticulosTrasladoSalida as $detArtTrasSal)
                                  <tr>
-                                     <td style=" text-align: left;white-space: nowrap;padding-left: 20px;line-height: 0.5"
+                                     <td style="text-align: left;white-space: nowrap;padding-left: 20px;line-height: 0.5"
                                          class="style-values">
                                          {{ $detArtTrasSal->descripcion }}</td>
-                                     <td style=" text-align: justify;padding-left: 40px;padding-right: 25px;line-height: 0.5"
+                                     <td style="text-align: justify;padding-left: 40px;padding-right: 25px;line-height: 0.5"
                                          class="style-values">
                                          {{ $detArtTrasSal->gramos }}</td>
-                                     <td style=" text-align: justify;padding-left: 70px;padding-right: 25px;line-height: 0.5"
+                                     <td style="text-align: justify;padding-left: 70px;padding-right: 25px;line-height: 0.5"
                                          class="style-values">
                                          {{ $detArtTrasSal->valor_compra }}</td>
 
@@ -508,14 +518,14 @@
                          <thead>
                              <tr style="width: 200px;">
                                  <th
-                                     style=" text-align: justify;font-size: 8pt;padding-left: 20px;line-height: 1; border: none;">
+                                     style="text-align: justify;font-size: 8pt;padding-left: 20px;line-height: 1; border: none;">
                                      Descripción</th>
                                  <th
-                                     style=" text-align: left;font-size: 8pt;padding-left: 40px;line-height: 1; border: none;">
+                                     style="text-align: left;font-size: 8pt;padding-left: 40px;line-height: 1; border: none;">
                                      Gramos
                                  </th>
                                  <th
-                                     style=" text-align: justify;font-size: 8pt;padding-left: 70px;line-height: 1; border: none;">
+                                     style="text-align: justify;font-size: 8pt;padding-left: 70px;line-height: 1; border: none;">
                                      Valor Compra</th>
 
                              </tr>
@@ -523,7 +533,7 @@
                          <tbody>
                              @foreach ($detalleArticulosTrasladosEntrada as $detArtTrasEnt)
                                  <tr>
-                                     <td style=" text-align: left;white-space: nowrap;padding-left: 20px;line-height: 0.5"
+                                     <td style="text-align: left;white-space: nowrap;padding-left: 20px;line-height: 0.5"
                                          class="style-values">
                                          {{ $detArtTrasEnt->descripcion }}</td>
                                      <td style=" text-align: left;padding-left: 40px;line-height: 0.5"
@@ -542,7 +552,7 @@
          </tbody>
      </table>
 
-     <table style="border-collapse: collapse;margin: 1px;border: 0.5px black solid;">
+     <table class="style-table">
          <caption style="padding: 10px;">
              <p class="title-head"><strong>DETALLE DE VENTAS</strong></p>
          </caption>
@@ -631,7 +641,7 @@
          </tbody>
      </table>
 
-     <table style="border-collapse: collapse;margin: 1px;border: 0.5px black solid;line-height: 1;">
+     <table class="style-table" style="line-height: 1;">
 
          <caption style="padding: 10px;">
              <p class="title-head"><strong>DETALLE DE ORDENES DEVENTAREMISIONADAS</strong></p>
@@ -725,7 +735,7 @@
          </tbody>
      </table>
 
-     <table style="border-collapse: collapse;margin: 1px;border: 0.5px black solid;line-height: 1; width:750px">
+     <table class="style-table" style="line-height: 1; width:750px">
 
          <caption style="padding: 10px;">
              <p class="title-head"><strong>DETALLE DE COMPRAS</strong></p>
@@ -816,7 +826,7 @@
          </tbody>
      </table>
 
-     <table style="border-collapse: collapse;margin: 1px;border: 0.5px black solid;line-height: 1; width:750px">
+     <table class="style-table" style="line-height: 1; width:750px">
 
          <caption style="padding: 10px;">
              <p class="title-head"><strong>DETALLE OTROS INGRESOS</strong></p>
@@ -857,7 +867,7 @@
          </tbody>
      </table>
 
-     <table style="margin: 1px;border: 0.5px black solid;">
+     <table class="margin-table">
          <caption style="padding: 10px;">
              <p class="title-head"><strong>DETALLE DE EGRESOS</strong></p>
          </caption>
@@ -924,7 +934,7 @@
          </tbody>
      </table>
 
-     <table style="margin: 1px;border: 0.5px black solid;">
+     <table class="margin-table">
          <caption style="padding: 10px;">
              <p class="title-head"><strong>DETALLE DE GASTOS</strong></p>
          </caption>
@@ -991,7 +1001,7 @@
          </tbody>
      </table>
 
-     <table style="border-collapse: collapse;margin: 1px;border: 0.5px black solid;line-height: 1; width:750px">
+     <table class="style-table" style="line-height: 1; width:750px">
 
          <caption style="padding: 10px;">
              <p class="title-head"><strong>TOTALES</strong></p>
@@ -1040,7 +1050,7 @@
          <p class="list-size-title">Usuario: <strong>Juan Ángel López Builes</strong></p>
      </li>
      <li class="list-style">
-         <p class="list-size-title"><strong>Firma: ___________________________________</strong></p>
+         <p class="list-size-title"><strong>Firma: ____________________________________________</strong></p>
      </li>
      <li class="list-style">
          <img style="width: 50px;" src="{{ storage_path('app/public/huellas/huella.png') }}">
