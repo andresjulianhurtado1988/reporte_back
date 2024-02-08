@@ -80,6 +80,7 @@
  </head>
 
  <body>
+
      <!-- Defina bloques de encabezado y pie de página antes de su contenido -->
      <header>
          <p style="line-height: 0.0;font-size: 8pt;text-align:center; "><strong>CUADRE DE CAJA</strong>
@@ -125,8 +126,7 @@
              </tr>
          </table>
      </header>
-
-     <footer>
+ <footer>
          <li class="list-style">
              <p class="list-size-title"><strong>SINNUT Versión: 0.0.1</strong></p>
              <br>
@@ -136,7 +136,7 @@
          </li>
      </footer>
 
-     <table style="border-collapse: collapse;">
+    <table style="border-collapse: collapse;">
          <tbody>
              <tr>
                  <td style="width: 360px">

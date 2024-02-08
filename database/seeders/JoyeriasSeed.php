@@ -25,16 +25,16 @@ class JoyeriasSeed extends Seeder
                     "codigo_joyeria" => "MED456",
                 ),
                 array(
-                    "nombre_joyeria" => "Itagui",
-                    "codigo_joyeria" => "ITA789",
+                    "nombre_joyeria" => "Guaca",
+                    "codigo_joyeria" => "GUA789",
                 ),
                 array(
-                    "nombre_joyeria" => "Envigado",
-                    "codigo_joyeria" => "ENV012",
+                    "nombre_joyeria" => "Tesoro",
+                    "codigo_joyeria" => "TES012",
                 ),
                 array(
-                    "nombre_joyeria" => "Universal",
-                    "codigo_joyeria" => "UNI345",
+                    "nombre_joyeria" => "Efectiva",
+                    "codigo_joyeria" => "EFE345",
                 ),
                 array(
                     "nombre_joyeria" => "Venecia",

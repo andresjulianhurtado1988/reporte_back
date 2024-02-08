@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ReportePrueba;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\ReporteExport;
 
@@ -28,7 +26,6 @@ class ReporteController extends Controller
         $fecha_fin = date("Y-m-d", strtotime($params_array['fechaFin']));
 
     }
-
     public function generarPdf(Request $request)
     {
 
@@ -41,10 +38,10 @@ class ReporteController extends Controller
         //     fechaFin: fechaFin,
         //   };
 
-        //   $misTiendas = $params_array['misTiendas'];
+        //   $tiendas = $params_array['misTiendas'];
 
-        $misTiendas = [1];
-        // $misTiendas = [1, 3, 5, 7, 4];
+        // $tiendas = [1];
+        $tiendas = [1, 3, 5, 7, 4];
 
         $ingresos = $this->ingresosData();
         $egresos = $this->egresosData();
@@ -103,14 +100,13 @@ class ReporteController extends Controller
                 'detalleRetroventaContratos',
                 'rangosFacturasDocumentos',
                 'fileName',
-                'misTiendas'
+                'tiendas'
             )
         );
 
         return $pdf->stream();
 
     }
-
     public function ingresosData()
     {
 
@@ -162,7 +158,6 @@ class ReporteController extends Controller
         ];
 
     }
-
     public function egresosData()
     {
 
@@ -206,7 +201,6 @@ class ReporteController extends Controller
             'total' => $total
         ];
     }
-
     public function detalleVentaArticulos()
     {
         $detalleVentaArticulo = [
@@ -248,7 +242,6 @@ class ReporteController extends Controller
 
         ];
     }
-
     public function detalleEgresosGastos()
     {
         $detalleEgresos = [
@@ -351,7 +344,6 @@ class ReporteController extends Controller
 
         ];
     }
-
     public function otrosIngresos()
     {
 
@@ -384,7 +376,6 @@ class ReporteController extends Controller
 
         ];
     }
-
     public function detalleContratoNuevo()
     {
 
@@ -423,7 +414,6 @@ class ReporteController extends Controller
 
         ];
     }
-
     public function detalleRetroventaContratos()
     {
         $detalleRetroventaContratos = [
@@ -459,7 +449,6 @@ class ReporteController extends Controller
 
         ];
     }
-
     public function rangosFacturasDocumentos()
     {
         $rangosFacturasDocumentos = [
